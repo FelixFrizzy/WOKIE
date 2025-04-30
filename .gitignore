@@ -1,0 +1,7 @@
+db
+cc.*
+fasttext*
+*.fish
+__pycache__
+.env
+.DS_Store
