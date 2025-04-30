@@ -1,7 +1,8 @@
 # WOKIE
 
 # General info
-- Tested with python 3.11.7. and 3.11.11 on MacOS 15
+WOKIE is a free, opensource tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR and multilingual vocabularies.
+
 
 # Prerequisits
 - Set up translation services that require API_KEYS (see .env.template)
@@ -9,6 +10,7 @@
 - install libretranslate (pip install libretranslate) and run it with `libretranslate --load-only ar,de,en,es,fr,hu,it,nb,nl,pt,ru,sl` if you want to use argos translate. caution: this does not work with python 3.13.x (as of 01.05.2025)
 
 # How to install
+- Tested with python 3.11.7. and 3.11.11 on MacOS 15
 
 1. Create virtual python environment
 2. `pip3 install -r requirements.txt
