@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <dc:contributor>Elisabeth Burr, Francesca Tomasi, Tiziana Mancinelli, Monica Berti, Klaus Thoden, Luise Borek, Christof Schöch, Claudia Müller-Birn, Melanie Siemund, Saskia Lindner, Tamara Butigan, Vanja Savic, Toma Tasovac, Aurélien Berra, Thibault Clérice, Martin Grandjean, Vincent Razanajao, Gimena del Rio Riande</dc:contributor>
+    <dc:creator>Luise Borek, Canan Hastik, Vera Khramova, Jonathan Geiger</dc:creator>
+    <dc:language xml:lang="en">English</dc:language>
+    <dcterms:created>2020</dcterms:created>
+    <dcterms:description xml:lang="en">Taxonomy of Digital Research Activities in the Humanities was designed to help community-driven sites and projects structure their digital humanities (DH) content and gain better visibility.TaDiRAH provides terminology for DH research activities as well as scope notes that also explain the methods associated with them. Version 2.0 linked here is a complete revision and skosification of the taxonomy. For more information and additional resources, see tadirah.info</dcterms:description>
+    <dcterms:issued>2020-09-28</dcterms:issued>
+    <dcterms:license>https://creativecommons.org/publicdomain/zero/1.0</dcterms:license>
+    <dcterms:modified>2021-07-22</dcterms:modified>
+    <dcterms:rightsHolder>Luise Borek, Quinn Dombrowski, Christoph Schöch, Jody Perkins, Matthew Munson</dcterms:rightsHolder>
+    <dcterms:title xml:lang="en">TaDiRAH</dcterms:title>
+    <rdfs:label xml:lang="en">TaDiRAH</rdfs:label>
+    <owl:versionInfo>2.0.1</owl:versionInfo>
+    <skos:hasTopConcept rdf:resource="https://vocabs.dariah.eu/tadirah/analyzing"/>
+    <skos:hasTopConcept rdf:resource="https://vocabs.dariah.eu/tadirah/capturing"/>
+    <skos:hasTopConcept rdf:resource="https://vocabs.dariah.eu/tadirah/creating"/>
+    <skos:hasTopConcept rdf:resource="https://vocabs.dariah.eu/tadirah/disseminating"/>
+    <foaf:homepage rdf:resource="http://www.tadirah.info"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/analyzing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:closeMatch rdf:resource="http://tadirah.dariah.eu/vocab/index.php?tema=25"/>
+    <skos:inScheme rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+    <skos:note xml:lang="en">analyzing  refers to the activity of examining any kind of information from collections of data, of discovering recurring phenomena, units, elements, patterns, groupings, and the like. This can refer to structural, formal or semantic aspects of data.</skos:note>
+    <skos:prefLabel xml:lang="it">Analisi</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Analyse</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Analyse</skos:prefLabel>
+    <skos:prefLabel xml:lang="pt">Análise</skos:prefLabel>
+    <skos:prefLabel xml:lang="es">Análisis</skos:prefLabel>
+    <skos:prefLabel xml:lang="sr">Анализа</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Analyse_dummy_fallback</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/capturing">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:closeMatch rdf:resource="http://tadirah.dariah.eu/vocab/index.php?tema=7"/>
+    <skos:inScheme rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+    <skos:note xml:lang="fr">L'acquisition fait généralement référence à l'activité de création de substituts numériques d'objets du monde réel ou d'expression d'artefacts existants sous une forme numérique. Cela implique l'apprentissage et l'observation (comme dans la découverte) et peut être amélioré par un processus manuel (comme la transcription) ou une procédure automatisée (comme l'imagerie, la reconnaissance de données ou l'enregistrement). Cela inclut également l'agrégation de ressources, d'informations et de données (comme dans la collecte).</skos:note>
+    <skos:note xml:lang="it">L'acquisizione si riferisce generalmente all'attività di creazione di surrogati digitali di oggetti del mondo reale o all'espressione di artefatti esistenti in una rappresentazione digitale. Ciò implica fondamentalmente l'apprendimento e l'osservazione (come nella scoperta) e può essere migliorato da un processo manuale (come nella trascrizione) o da una procedura automatizzata (come nell'imaging, nel riconoscimento dei dati o nella registrazione). Include anche l'aggregazione di risorse, informazioni e dati (come nella raccolta).</skos:note>
+    <skos:note xml:lang="es">La captura generalmente se refiere a la actividad de crear sustitutos digitales de objetos del mundo real o de expresar artefactos existentes en una representación digital. Esto implica básicamente aprender y notar algo (como en el descubrimiento) y puede mejorarse mediante un proceso manual (como en la transcripción) o un procedimiento automatizado (como en la obtención de imágenes, el reconocimiento de datos o la grabación). También incluye la agregación de recursos, información y datos (como en la recopilación).</skos:note>
+    <skos:note xml:lang="pt">A captura refere-se geralmente à atividade de criar substitutos digitais de objetos do mundo real ou de expressar artefatos existentes numa representação digital. Isto refere-se basicamente à aprendizagem e à observação (como na descoberta) e pode ser aprimorado por um processo manual (como na transcrição) ou por um procedimento automatizado (como na captura de imagens, no reconhecimento de dados ou na gravação). Também inclui a agregação de recursos, informações e dados (como na recolha).</skos:note>
+    <skos:note xml:lang="de">Erfassen bezieht sich im Allgemeinen auf die Tätigkeit, digitale Stellvertreter für reale Objekte zu erstellen oder bestehende Artefakte in einer digitalen Darstellung auszudrücken. Dies bezieht sich im Wesentlichen auf das Lernen und Wahrnehmen von etwas (wie beim Entdecken) und kann durch einen manuellen Prozess (wie beim Transkribieren) oder ein automatisiertes Verfahren (wie beim Imaging, der Datenerkennung oder der Aufzeichnung) verbessert werden. Dies umfasst auch die Aggregation von Ressourcen, Informationen und Daten (wie beim Sammeln).</skos:note>
+    <skos:note xml:lang="sr">Захватање се генерално односи на активност стварања дигиталних сурогата стварних објеката или изражавања постојећих артефаката у дигиталном облику. Ово се у основи односи на учење и уочавање нечега (као у откривању) и може бити унапређено ручним процесом (као у транскрипцији) или аутоматизованом процедуром (као у сликању, препознавању података или снимању). Ово такође укључује агрегирање ресурса, информација и података (као у прикупљању).</skos:note>
+    <skos:prefLabel xml:lang="fr">Acquisition</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Acquisizione</skos:prefLabel>
+    <skos:prefLabel xml:lang="es">Captura</skos:prefLabel>
+    <skos:prefLabel xml:lang="pt">Captura</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Erfassen</skos:prefLabel>
+    <skos:prefLabel xml:lang="sr">Захватање</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Captura_dummy_fallback</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/creating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:closeMatch rdf:resource="http://tadirah.dariah.eu/vocab/index.php?tema=15&amp;/2_creation"/>
+    <skos:inScheme rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+    <skos:note xml:lang="es">La creación generalmente se refiere a la producción de objetos digitales nativos como una contribución propia, en lugar de generar un resultado mediante la captura y digitalización de objetos analógicos existentes o el enriquecimiento de información. La creación puede implicar la redacción o traducción de textos en lenguaje natural, así como otras formas de expresión, como la creación de código ejecutable (programación), la composición de una partitura musical, la creación de una imagen o el desarrollo de cualquier diseño (diseño) para cualquier medio o la implementación de estos conceptos de diseño (desarrollo web).</skos:note>
+    <skos:note xml:lang="it">La creazione si riferisce generalmente alla produzione di oggetti digitali nativi come contributo proprio, piuttosto che alla generazione di un risultato attraverso la cattura e la digitalizzazione di oggetti analogici esistenti o l'arricchimento delle informazioni. Creare può implicare la scrittura o la traduzione di testi in linguaggio naturale o può riguardare altre forme di espressione, come la creazione di codice eseguibile (programmazione), la composizione di una partitura musicale, la creazione di un'immagine o lo sviluppo di qualsiasi design (progettazione) per qualsiasi mezzo o l'implementazione di questi concetti di design (sviluppo web).</skos:note>
+    <skos:note xml:lang="pt">A criação refere-se geralmente à produção de objetos digitais nativos como uma contribuição própria, em vez de gerar um resultado através da captura e digitalização de objetos analógicos existentes ou do enriquecimento da informação. Criar pode envolver a escrita ou tradução de textos em linguagem natural, bem como outras formas de expressão, como a criação de código executável (programação), a composição de uma partitura musical, a criação de uma imagem ou o desenvolvimento de qualquer design (projeto) para qualquer meio ou a implementação desses conceitos de design (desenvolvimento web).</skos:note>
+    <skos:note xml:lang="fr">La création fait généralement référence à la production d'objets numériques natifs comme une contribution propre, plutôt qu'à la génération d'un résultat par la capture et la numérisation d'objets analogiques existants ou l'enrichissement de l'information. Créer peut impliquer la rédaction ou la traduction de textes en langage naturel, ainsi que d'autres formes d'expression, telles que la création de code exécutable (programmation), la composition d'une partition musicale, la création d'une image ou le développement de tout design (conception) pour tout support ou la mise en œuvre de ces concepts de design (développement web).</skos:note>
+    <skos:note xml:lang="de">Erzeugen bezieht sich im Allgemeinen auf die Produktion von digital geborenen Objekten als eigene Leistung, anstatt ein Ergebnis durch das Erfassen und Digitalisieren bestehender analoger Objekte oder die Anreicherung von Informationen zu erzeugen. Erstellen kann das Schreiben oder Übersetzen von natürlichen Sprachtexten umfassen oder sich auf andere Ausdrucksformen beziehen, wie das Erstellen von ausführbarem Code (Programmierung), das Komponieren einer musikalischen Partitur, das Erstellen eines Bildes oder die Entwicklung eines beliebigen Designs (Gestaltung) für jedes Medium oder die Umsetzung dieser Designkonzepte (Webentwicklung).</skos:note>
+    <skos:note xml:lang="sr">Стварање се генерално односи на производњу нативних дигиталних објеката као сопствени допринос, уместо на генерисање резултата хватањем и дигитализацијом постојећих аналогних објеката или обогаћивањем информација. Стварање може укључивати писање или превођење текстова на природном језику, као и друге облике изражавања, као што су стварање извршног кода (програмирање), компоновање музичке партитуре, креирање слике или развој било којег дизајна (дизајнирање) за било који медиј или имплементацију ових концепата дизајна (веб развој).</skos:note>
+    <skos:prefLabel xml:lang="es">Creación</skos:prefLabel>
+    <skos:prefLabel xml:lang="it">Creazione</skos:prefLabel>
+    <skos:prefLabel xml:lang="pt">Criação</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Création</skos:prefLabel>
+    <skos:prefLabel xml:lang="de">Erzeugen</skos:prefLabel>
+    <skos:prefLabel xml:lang="sr">Стварање</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Creación_dummy_fallback</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/disseminating">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:closeMatch rdf:resource="http://tadirah.dariah.eu/vocab/index.php?tema=42&amp;/7_dissemination"/>
+    <skos:inScheme rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+    <skos:note xml:lang="en">disseminating refers to the activity of making objects of inquiry, results of research, or software and services available to fellow researchers or the wider public in a variety of more or less formal ways. It builds on or requires storing and can include releasing (publishing and commenting) and sharing (collaborating, crowdsourcing, and communicating) of data using a variety of methods and techniques including the application of linked open data.</skos:note>
+    <skos:prefLabel xml:lang="de">Dissemination</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Dissemination</skos:prefLabel>
+    <skos:prefLabel xml:lang="pt">Dissemination</skos:prefLabel>
+    <skos:prefLabel xml:lang="sr">Dissemination</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Dissemination_en_dummy</skos:prefLabel>
+    <skos:topConceptOf rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
+  </rdf:Description>
+</rdf:RDF>
