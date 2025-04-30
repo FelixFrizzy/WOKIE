@@ -35,12 +35,16 @@ You can implement you own translation services under modules/primary_translators
 - run `pytest test_translation_services.py`  for API tests (requires secrets in `.env`) and might consume very little Tokens of paid APIs. This is excluded by default when running `pytest`
 - run `pytest `--cov=. --cov-report=xml` if you use a coverage extension in your IDE that uses coverage.xml reports (e.g. gutter extension in VSCode)
 
-# 
-
-**License**
+# License Information
+Used vocabularies: [TaDiRAH](https://vocabs.acdh.oeaw.ac.at/tadirah/en/) (adapted) [[CC0](https://creativecommons.org/publicdomain/zero/1.0/); Creators: Luise Borek, Canan Hastik, Vera Khramova, Jonathan Geiger]
 
 WOKIE is licensed under the Apache License, Version 2.0. 
 License owner: Karlsruhe Institute of Technology (KIT)
 
-**Acknowledgement**
+# Contact information
+- Creator: Felix Kraus
+- Email (substitute accordingly): firstname.lastname (at) kit (dot) edu
+- License owner: Karlsruhe Institute of Technology (KIT)
+
+# Acknowledgement
 Development of this software product was funded by the research program “Engineering Digital Futures” of the Helmholtz Association of German Research Centers and the Helmholtz Metadata Collaboration Platform (HMC)
