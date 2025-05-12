@@ -12,11 +12,20 @@ class PromptFormatter(ABC):
 
 
 class OpenAIPromptFormatter(PromptFormatter):
-    # TODO alles wird hier zweimal eingegeben, das macht eig. kein sinn
+
     def format(self, composed_text: str, target_lang: str) -> dict:
         instructions = (
             f"You are a machine translation system that translates a term from any language to {target_lang}.\n "
             f"To determine the correct context, use the provided additional details. Return only the translated term and nothing else."
+        )
+        return {"instructions": instructions, "input": composed_text}
+    
+class MistralPromptFormatter(PromptFormatter):
+
+    def format(self, composed_text: str, target_lang: str) -> dict:
+        instructions = (
+            f"You are a machine translation system that translates a term from any language to {target_lang}.\n "
+            f"To determine the correct context, use the provided additional details. Return only the translated term and nothing else, especially don't give any notes, explanations or reasoning steps."
         )
         return {"instructions": instructions, "input": composed_text}
 

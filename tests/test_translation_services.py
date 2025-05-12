@@ -11,9 +11,13 @@ from modules.primary_translators.reverso_translator import ReversoTranslationSer
 from modules.primary_translators.translatecom_translator import TranslatecomTranslationService
 from modules.primary_translators.yandex_translator import YandexTranslationService
 from modules.secondary_translators.ollama_translator import OllamaTranslationService
+from modules.secondary_translators.anthropic_translator import AnthropicTranslationService
+from modules.secondary_translators.blablador_translator import BlabladorTranslationService
+from modules.secondary_translators.mistral_translator import MistralTranslationService
 from modules.secondary_translators.openai_translator import OpenAITranslationService
 from modules.secondary_translators.openwebui_translator import OpenWebUITranslationService
 from modules.secondary_translators.deepseek_translator import DeepseekTranslationService
+from modules.secondary_translators.gemini_translator import GeminiTranslationService
 
 # Test data for primary and secondary services
 test_data_primary = [
@@ -32,9 +36,7 @@ test_data_secondary = [
     # ("with", "en", "nl", "written text"),
 ]
 
-# -------------------------------
 # Primary translation services
-# -------------------------------
 
 @pytest.mark.parametrize("term, src_lang, target_lang", test_data_primary)
 def test_argos_translator(term, src_lang, target_lang):
@@ -104,9 +106,7 @@ def test_yandex_translator(term, src_lang, target_lang):
     assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
 
 
-# -------------------------------
 # Secondary translation services
-# -------------------------------
 
 def build_prompt_dict(term, target_lang, context):
     prompt = {}
@@ -114,30 +114,21 @@ def build_prompt_dict(term, target_lang, context):
     prompt["input"] = f"Term to translate: {term}"
     return prompt
 
-def build_prompt_str(term, target_lang, context):
-    prompt = (
-        f"Translate to {target_lang}.\n"
-        f"Context:\n{context}\n"
-        f"Term to translate: {term}"
-    )
-    return prompt
+
 
 
 # Test for Ollama translation service
-# We'll simulate a prompt string that matches the expected format.
 @pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
 def test_ollama_translator(term, src_lang, target_lang, context):
     service = OllamaTranslationService(model_name="llama3.2")  # Adjust model name if needed
-    # Simulate a prompt string. For Ollama, our format is a plain string.
     # Ensure it contains "Term to translate:" so the dummy service can extract it.
-    prompt = build_prompt_str(term, target_lang, context)
+    prompt = build_prompt_dict(term, target_lang, context)
     translation = service.translate_with_context(prompt)
     print(translation)
     # Check that the translation is non-empty and a string.
     assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
 
 # Test for OpenAI translation service
-# We'll simulate a prompt as a dictionary (instructions and input).
 @pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
 def test_openai_translator(term, src_lang, target_lang, context):
     service = OpenAITranslationService(model_name="gpt-3.5-turbo")  # Adjust model name if needed
@@ -149,7 +140,6 @@ def test_openai_translator(term, src_lang, target_lang, context):
     assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
 
 # Test for OpenWebUI translation service
-# We'll simulate a prompt as a dictionary (instructions and input).
 @pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
 def test_openwebui_translator(term, src_lang, target_lang, context):
     service = OpenWebUITranslationService(model_name="gpt-4o-mini")  # Adjust model name if needed
@@ -163,7 +153,6 @@ def test_openwebui_translator(term, src_lang, target_lang, context):
 
 
 # Test for Deepseek translation service
-# We'll simulate a prompt as a dictionary (instructions and input).
 @pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
 def test_deepseek_translator(term, src_lang, target_lang, context):
     service = DeepseekTranslationService(model_name="deepseek-chat")  # Adjust model name if needed
@@ -174,4 +163,56 @@ def test_deepseek_translator(term, src_lang, target_lang, context):
     print(translation)
     # Check that the translation is non-empty and is a string.
     assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
+
+# Test for Blalbador translation service
+@pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
+def test_blablador_translator(term, src_lang, target_lang, context):
+    service = BlabladorTranslationService(model_name="1 - Ministral 8b - the fast model")  # Adjust model name if needed
+    # Simulate a prompt dictionary.
+    prompt = build_prompt_dict(term, target_lang, context)
+
+    translation = service.translate_with_context(prompt)
+    print(translation)
+    # Check that the translation is non-empty and is a string.
+    assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
+
+
+# Test for Anthropic translation service
+@pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
+def test_anthropic_translator(term, src_lang, target_lang, context):
+    service = AnthropicTranslationService(model_name="claude-3-haiku-20240307")  # Adjust model name if needed
+    # Simulate a prompt dictionary.
+    prompt = build_prompt_dict(term, target_lang, context)
+
+    translation = service.translate_with_context(prompt)
+    print(translation)
+    # Check that the translation is non-empty and is a string.
+    assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
+
+
+# Test for Mistral translation service
+@pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
+def test_mistral_translator(term, src_lang, target_lang, context):
+    service = MistralTranslationService(model_name="mistral-small-latest")  # Adjust model name if needed
+    # Simulate a prompt dictionary.
+    prompt = build_prompt_dict(term, target_lang, context)
+
+    translation = service.translate_with_context(prompt)
+    print(translation)
+    # Check that the translation is non-empty and is a string.
+    assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
+
+
+# Test for gemini translation service
+@pytest.mark.parametrize("term, src_lang, target_lang, context", test_data_secondary)
+def test_gemini_translator(term, src_lang, target_lang, context):
+    service = GeminiTranslationService(model_name="gemini-2.0-flash-lite")  # Adjust model name if needed
+    # Simulate a prompt dictionary.
+    prompt = build_prompt_dict(term, target_lang, context)
+
+    translation = service.translate_with_context(prompt)
+    print(translation)
+    # Check that the translation is non-empty and is a string.
+    assert translation and isinstance(translation, str), f"Translation of '{term}' from {src_lang} to {target_lang} should not be empty"
+
 

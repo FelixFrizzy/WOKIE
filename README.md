@@ -10,16 +10,15 @@ WOKIE is a free, opensource tool that automatically translates SKOS thesauri int
 - install libretranslate (pip install libretranslate) and run it with `libretranslate --load-only ar,de,en,es,fr,hu,it,nb,nl,pt,ru,sl` if you want to use argos translate. caution: this does not work with python 3.13.x (as of 01.05.2025)
 
 # How to install
-- Tested with python 3.11.7. and 3.11.11 on MacOS 15
+- Tested with python 3.11.12 on MacOS 15 and on Debian 12
 
 1. Create virtual python environment
 2. `pip3 install -r requirements.txt
-3. `ollama pull llama3.2 deepseek-r1:1.5b`
-4. `cp .env.template .env`
-5. Add API secrets to `.env`
+3. `cp .env.template .env`
+5. Add API secrets and other required environment variables (depending on which serivces you want to use) to `.env`
 
 # How to run
-## vars
+## Command line arguments
 see `python main.py --help`
 
 ## Example run
@@ -35,7 +34,6 @@ You can implement you own translation services under modules/primary_translators
 ## tests
 - run `pytest tests/test_integration.py` in main folder to run integration test
 - run `pytest test_translation_services.py`  for API tests (requires secrets in `.env`) and might consume very little Tokens of paid APIs. This is excluded by default when running `pytest`
-- run `pytest `--cov=. --cov-report=xml` if you use a coverage extension in your IDE that uses coverage.xml reports (e.g. gutter extension in VSCode)
 
 # License Information
 Used vocabularies: [TaDiRAH](https://vocabs.acdh.oeaw.ac.at/tadirah/en/) (adapted) [[CC0](https://creativecommons.org/publicdomain/zero/1.0/); Creators: Luise Borek, Canan Hastik, Vera Khramova, Jonathan Geiger]
