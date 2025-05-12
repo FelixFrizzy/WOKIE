@@ -33,29 +33,60 @@ from config import DEBUG
 
 def main():
     # All argparse arguments
-    parser = argparse.ArgumentParser(description="Translate a SKOS file to the desired language")
-    parser.add_argument("-i", "--input", required=True, 
-                        help="Path to the source SKOS file")
-    parser.add_argument("--language", required=True, 
-                        help="Target language as IETF BCP 47 tag (e.g. de)")
-    parser.add_argument("--context", default="", 
-                        help="Topic or Context of source vocabulary")
-    parser.add_argument("--threshold", type=float, default=0.66, 
-                        help="Threshold for decision if secondary translation services are used to refine translations")
-    parser.add_argument("--primary_translation", required=True, nargs='+', choices=["argos", "google", "lingvanex", "microsoft", "modernmt", "ponspaid", "reverso", "yandex", "dummynone"], 
-                        help="Primary (deterministic) translation service. Options: argos, google, lingvanex, microsoft, modernmt, ponspaid, reverso, yandex")
-    parser.add_argument("--secondary_translation", required=True, choices=["claude-3-5-haiku", "claude-3-5-sonnet", "claude-3-7-sonnet", "claude-3-haiku", "codestral-latest", "codestral-mamba-latest", "deepseek-chat", "deepseek-reasoner", "gemini-1.5-flash-8b", "gemini-1.5-flash", "gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-2.5-flash-preview-04-17", "gemma3:12b(openwebui)", "gpt-3.5-turbo", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-4.1(openwebui)", "gpt-4o-mini", "gpt-4o", "llama-4-maverick:free(openwebui)", "ministral-3b-latest", "ministral-8b-latest", "mistral-large-latest", "mistral-medium-latest", "mistral-small-latest", "mistral-tiny-latest", "open-mistral-nemo", "open-mixtral-8x22b", "dummy"],
-                        help="Secondary (language-model based) translation service. Options: claude-3-5-haiku, claude-3-5-sonnet, claude-3-7-sonnet, claude-3-haiku, claude-3-opus, codestral-latest, codestral-mamba-latest, deepseek-chat, deepseek-reasoner, gemini-1.5-flash-8b, gemini-1.5-flash, gemini-2.0-flash-lite, gemini-2.0-flash, gemini-2.5-flash-preview-04-17, gemma3:12b(openwebui), gpt-3.5-turbo, gpt-4.1-mini, gpt-4.1-nano, gpt-4.1(openwebui), gpt-4o-mini, gpt-4o, llama-4-maverick:free(openwebui), ministral-3b-latest, ministral-8b-latest, mistral-large-latest, mistral-medium-latest, mistral-small-latest, mistral-tiny-latest, open-mistral-nemo, open-mixtral-8x22b, dummy")
-    parser.add_argument("--secondary_strategy", required=False, default="individual", choices=["individual", "batch", "hierarchy"],
-                        help="Secondary translation strategy. Options: individual, batch, hierarchy")
-    parser.add_argument("--min_primary_translations", type=int, required=False, default="5", choices=range(1,9),
-                        help="Required number of translations of a single term before the primary confidence calculator is called. Between 1 and 8 with 8 being the number maximum number of primary services.")
-    parser.add_argument("--max_retries", type=int, required=False, default="1", choices=range(0,11),
-                        help="Maximum number of retry attempts (0–10) if the LLM response doesn't match the required format. Capped at 10 to prevent infinite retries.")
-    parser.add_argument("--temperature", type=float, required=False, default="0",
-                        help="Controls randomness in generation (0.0 = deterministic, higher = more random). Must be between 0.0 and 2.0. Effect of temperature settings varies across models and providers")
-    parser.add_argument("--enable-logging", action="store_true", 
-                        help="Enable logging")
+    parser = argparse.ArgumentParser(description="Translate a SKOS file to the desired language using multiple primary translation services and optional LLM (secondary service) for refinement.")
+    parser.add_argument("-i", "--input", 
+                        required=True, 
+                        help="Path to the source SKOS file (.rdf) you want to translate.")
+    parser.add_argument("--language", 
+                        required=True, 
+                        help="Target language (IETF BCP 47), e.g. 'de' for German.")
+    parser.add_argument("--context", 
+                        default="", 
+                        help="Topic, domain or description of source vocabulary to help disambiguate translations.")
+    parser.add_argument("--threshold", 
+                        type=float, 
+                        default=0.6, 
+                        help="Threshold between 0.0 and 1.0. If confidence < threshold, the secondary service (LLM) is called. Confidence is calculated as the number of identical primary translations (coming from multiple services) divided by total number of primary translations.")
+    parser.add_argument("--primary_translation", 
+                        required=True, 
+                        nargs='+', 
+                        choices=["argos", "google", "lingvanex", "microsoft", "modernmt", "ponspaid", "reverso", "yandex", "dummynone"], 
+                        help="List of one or more translation services that is used in the pipeline. At least one must be provided; order defines priority.")
+    parser.add_argument("--secondary_translation", 
+                        required=True, 
+                        choices=["claude-3-5-haiku", "claude-3-5-sonnet", "claude-3-7-sonnet", "claude-3-haiku", "codestral-latest", "codestral-mamba-latest", "deepseek-chat", "deepseek-reasoner", "gemini-1.5-flash-8b", "gemini-1.5-flash", "gemini-2.0-flash-lite", "gemini-2.0-flash", "gemini-2.5-flash-preview-04-17", "gemma3:12b(openwebui)", "gpt-3.5-turbo", "gpt-4.1-mini", "gpt-4.1-nano", "gpt-4.1(openwebui)", "gpt-4o-mini", "gpt-4o", "llama-4-maverick:free(openwebui)", "ministral-3b-latest", "ministral-8b-latest", "mistral-large-latest", "mistral-medium-latest", "mistral-small-latest", "mistral-tiny-latest", "open-mistral-nemo", "open-mixtral-8x22b", "dummy"],
+                        help="Single LLM-based translation service used  to refine any low-confidence translations.")
+    parser.add_argument("--secondary_strategy", 
+                        required=False, 
+                        default="individual", 
+                        choices=["individual", "batch", "hierarchy"],
+                        help=(
+                            "What goes into the prompt:\n"
+                            "  individual – translate each language of a term separately;\n"
+                            "  batch      – translate all languages of a term in one prompt;\n"
+                            "  hierarchy  – batch + additionally information about broader terms."
+                        )
+    )
+    parser.add_argument("--min_primary_translations", 
+                        type=int, 
+                        required=False, 
+                        default=5, 
+                        choices=range(1,9),
+                        help="Number of primary translations required per label before calculating the confidence. Must be between 1 and 8 (the max number of primary services).")
+    parser.add_argument("--max_retries", 
+                        type=int, 
+                        required=False, 
+                        default=1, 
+                        choices=range(0,11),
+                        help="Maximum retry attempts (0–10) if the LLM does not return a valid, parsable response.")
+    parser.add_argument("--temperature", 
+                        type=float, 
+                        required=False, 
+                        default=0,
+                        help="Controls randomness in generation (0.0 = deterministic, higher = more random). Must be between 0.0 and 2.0. Effect of temperature settings varies across models and providers.")
+    parser.add_argument("--enable-logging", 
+                        action="store_true", 
+                        help="Enable detailed DEBUG-level logfile in the location of the input file.")
     args = parser.parse_args()
 
     # Needed for logs and filenames
