@@ -106,7 +106,7 @@ class LLMConfidenceCalculator():
     
 
     def build_prompt(self, labels: list, translation_candidates, term_descriptions, vocab_context, user_context, target_lang_full):
-        instruction_prompt = """"
+        instruction_prompt = """
         You are a professional translation review system that assesses the quality of translations of a single term given in different source languages. The translations are already given by a translation system. Give me the best fitting translation out of the given list and a confidence how sure you are that the translation is accurate on a scale from 0 to 1. If no possible translation seems to be fitting, return None as best fitting translation and a confidence of 0.
         Criteria for high accuracy are:
         - The best fitting translation is already found in the already given possible translations
