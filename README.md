@@ -1,8 +1,5 @@
-# WOKIE
-
 # General info
-WOKIE is a free, opensource tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR and multilingual vocabularies.
-
+- Tested with python3.11.12 on MacOS 15 and on Debian 12
 
 # Prerequisits
 - Set up translation services that require API_KEYS (see .env.template)
@@ -10,7 +7,6 @@ WOKIE is a free, opensource tool that automatically translates SKOS thesauri int
 - install libretranslate (pip install libretranslate) and run it with `libretranslate --load-only ar,de,en,es,fr,hu,it,nb,nl,pt,ru,sl` if you want to use argos translate. caution: this does not work with python 3.13.x (as of 01.05.2025)
 
 # How to install
-- Tested with python 3.11.7. and 3.11.11 on MacOS 15
 
 1. Create virtual python environment
 2. `pip3 install -r requirements.txt
@@ -19,34 +15,14 @@ WOKIE is a free, opensource tool that automatically translates SKOS thesauri int
 5. Add API secrets to `.env`
 
 # How to run
-## vars
-see `python main.py --help`
-
-## Example run
+Example run:
 `python translateontology.py --input inputfile.rdf --language "en" --context "Digital Humanities" --threshold 0.6 --primary_translation "google" --secondary_translation "openai" --model "gpt-3.5-turbo"`
 `python main.py --input inputfile.rdf --language "en" --context "Digital Humanities" --threshold 0.6 --primary_translation google modernmt reverso --secondary_translation "gpt-3.5-turbo" --secondary_strategy individual`
+# How to use own translation services
 
 # Developer infos
 - enable logging with `python main.py ... --enable-logging`
 - run translator services individually for testing: e.g. `python -m modules.primary_translators.modernmt_translator`
-
-## How to use own translation services
-You can implement you own translation services under modules/primary_translators and modules/secondary_translators. See abstract base class for more info.
 ## tests
 - run `pytest tests/test_integration.py` in main folder to run integration test
 - run `pytest test_translation_services.py`  for API tests (requires secrets in `.env`) and might consume very little Tokens of paid APIs. This is excluded by default when running `pytest`
-- run `pytest `--cov=. --cov-report=xml` if you use a coverage extension in your IDE that uses coverage.xml reports (e.g. gutter extension in VSCode)
-
-# License Information
-Used vocabularies: [TaDiRAH](https://vocabs.acdh.oeaw.ac.at/tadirah/en/) (adapted) [[CC0](https://creativecommons.org/publicdomain/zero/1.0/); Creators: Luise Borek, Canan Hastik, Vera Khramova, Jonathan Geiger]
-
-WOKIE is licensed under the Apache License, Version 2.0. 
-License owner: Karlsruhe Institute of Technology (KIT)
-
-# Contact information
-- Creator: Felix Kraus
-- Email (substitute accordingly): firstname.lastname (at) kit (dot) edu
-- License owner: Karlsruhe Institute of Technology (KIT)
-
-# Acknowledgement
-Development of this software product was funded by the research program “Engineering Digital Futures” of the Helmholtz Association of German Research Centers and the Helmholtz Metadata Collaboration Platform (HMC)

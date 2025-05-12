@@ -46,7 +46,7 @@
     <skos:prefLabel xml:lang="pt">Análise</skos:prefLabel>
     <skos:prefLabel xml:lang="es">Análisis</skos:prefLabel>
     <skos:prefLabel xml:lang="sr">Анализа</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Analyse_dummy_fallback</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Analyse_en_dummy</skos:prefLabel>
     <skos:topConceptOf rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/capturing">
@@ -66,7 +66,7 @@
     <skos:prefLabel xml:lang="pt">Captura</skos:prefLabel>
     <skos:prefLabel xml:lang="de">Erfassen</skos:prefLabel>
     <skos:prefLabel xml:lang="sr">Захватање</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Captura_dummy_fallback</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Captura_en_dummy</skos:prefLabel>
     <skos:topConceptOf rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/creating">
@@ -86,7 +86,7 @@
     <skos:prefLabel xml:lang="fr">Création</skos:prefLabel>
     <skos:prefLabel xml:lang="de">Erzeugen</skos:prefLabel>
     <skos:prefLabel xml:lang="sr">Стварање</skos:prefLabel>
-    <skos:prefLabel xml:lang="en">Creación_dummy_fallback</skos:prefLabel>
+    <skos:prefLabel xml:lang="en">Creación_en_dummy</skos:prefLabel>
     <skos:topConceptOf rdf:resource="https://vocabs.dariah.eu/tadirah/"/>
   </rdf:Description>
   <rdf:Description rdf:about="https://vocabs.dariah.eu/tadirah/disseminating">

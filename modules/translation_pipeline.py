@@ -6,7 +6,7 @@ from langcodes import Language
 from modules.utils import temporary_setattr
 from modules.skos_handler import load_graph, extract_vocabulary_context, extract_term_properties, SKOS_TERM_PROPERTIES
 
-# --- Helper functions (copied from secondary translation strategies) ---
+# Helper functions (partly copied from secondary_translation_strategies)
 
 def get_label_and_lang(label):
     if isinstance(label, tuple):
@@ -32,6 +32,60 @@ def group_labels_by_language(labels):
         text, lang = get_label_and_lang(label)
         grouped[lang].append(text)
     return grouped
+
+def compile_translations_dict(primary_translations, secondary_translations):
+    """
+    Given two inputs (each one can be a str, list[str], or dict,
+    return a single dict where:
+      - dict-inputs get "lang_suffix": value
+      - str- or list-inputs get "suffix": value
+    Single-element lists become bare strings; multi-element lists stay lists.
+    """
+
+    def validate_and_flatten(d, suffix):
+        out = {}
+
+        # 1) raw string
+        if isinstance(d, str):
+            out[suffix] = d
+            return out
+
+        # 2) top-level list of strings -> flatten 
+        if isinstance(d, list):
+            if not all(isinstance(item, str) for item in d):
+                raise TypeError(f"All items in list must be str, got {d!r}")
+            out[suffix] = d[0] if len(d) == 1 else list(d)
+            return out
+
+        # 3) per-lang dict
+        if isinstance(d, dict):
+            for lang, val in d.items():
+                # skip None
+                if val is None:
+                    continue
+
+                # single string
+                if isinstance(val, str):
+                    out[f"{lang}_{suffix}"] = val
+
+                # list of strings -> flatten singletons
+                elif isinstance(val, list):
+                    if not all(isinstance(item, str) for item in val):
+                        raise TypeError(f"All items in list must be str, got {val!r}")
+                    flattened = val[0] if len(val) == 1 else list(val)
+                    out[f"{lang}_{suffix}"] = flattened
+
+                else:
+                    raise TypeError(f"Values must be str or list[str], got {type(val)}")
+            return out
+
+        # anything else is invalid
+        raise TypeError(f"Expected str, list[str], or dict, got {type(d)}")
+
+    result = {}
+    result.update(validate_and_flatten(primary_translations,   "primary"))
+    result.update(validate_and_flatten(secondary_translations, "secondary"))
+    return result
 
 class TranslationPipeline:
     """
@@ -65,7 +119,7 @@ class TranslationPipeline:
 
         # Define which SKOS properties to translate
         # Currently only prefLabel will be translated
-        self.properties_to_translate = ["prefLabel"] #TODO translation of skos:note does of course not work with simple translation service
+        self.properties_to_translate = ["prefLabel"] 
 
     # When output_file is set to "default", the string "_updated" is appended to the input_filename
     def process_file(self, input_file, target_lang, user_context, output_file="default"):
@@ -79,11 +133,13 @@ class TranslationPipeline:
         if self.logger:
             self.logger.info(f"Total concepts: {total_concepts}")
 
+
         # Iterate over each term (concept) in the vocabulary
         for i, (concept, term_props) in enumerate(term_properties.items(), start=1):
+            timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
             # Use ANSI codes (\033[K) to erase until end of line for proper flushing
             # Does not properly work when piping console output to file
-            print(f"\r\033[KProcessing term {i}/{total_concepts}: {concept}", end='', flush=True)
+            print(f"\r\033[KProcessing term {i}/{total_concepts} with primary services and {self.secondary_translation_service.service_name}: {concept} [{timestamp}]", end='', flush=True)
             if self.logger:
                 self.logger.info(f"Processing concept: {concept}")
             for prop_name in self.properties_to_translate:
@@ -144,15 +200,18 @@ class TranslationPipeline:
                     else:
                         most_common_secondary_translation = secondary_translations
 
+                    lower_most_common_secondary_translation = None
+                    if most_common_secondary_translation: # guard against None
+                        lower_most_common_secondary_translation = most_common_secondary_translation.lower()
                     # If most common secondary translation is in primary translations, use it as best_translation and set secondary_confidence to 1. Steps explained in the following
 
                     # Check every value in primary_translations (could be a str or list of str)
-                    if any(
+                    if lower_most_common_secondary_translation and any(
                         # Case 1: primary_translation is a string and matches our secondary (case-insensitive)
-                        (isinstance(primary_translation, str) and primary_translation.lower() == most_common_secondary_translation.lower())
+                        (isinstance(primary_translation, str) and primary_translation.lower() == lower_most_common_secondary_translation)
                         # Case 2: primary_translation is a list of strings, check each element
                         or (isinstance(primary_translation, list) and any(
-                            isinstance(candidate, str) and candidate.lower() == most_common_secondary_translation.lower()
+                            isinstance(candidate, str) and candidate.lower() == lower_most_common_secondary_translation
                             for candidate in primary_translation
                         ))
                         for primary_translation in primary_translations.values()
@@ -166,22 +225,19 @@ class TranslationPipeline:
 
                     # If most common secondary translation is not in primary translations, use the secondary_confidence_calculator, but include the primary translations
                     else:
-
-
-                        # compile a dict of all primary and secondary translations
                         # use secondary confidence calculator (LLM based) to rate the translation
                         # Temporarily set max_retries to 0 because I only want to try this once (so no retries)
-                        with temporary_setattr(self.secondary_confidence_calculator, "max_retries", 0):
-                            best_translation, secondary_confidence = self.secondary_confidence_calculator.calculate(labels, primary_translations, secondary_translations, term_props, vocab_context, user_context, target_lang, logger=self.logger)
-                    # use primary_conficence_calculator if it fails
+                        # with temporary_setattr(self.secondary_confidence_calculator, "max_retries", 0):
+                        best_translation, secondary_confidence = self.secondary_confidence_calculator.calculate(labels, primary_translations, secondary_translations, term_props, vocab_context, user_context, target_lang, logger=self.logger)
+                    # use primary_conficence_calculator with primary translations if it fails
                     if not best_translation or not secondary_confidence:
-                        best_translation, secondary_confidence = self.primary_confidence_calculator.calculate(secondary_translations)
+                        best_translation, secondary_confidence = self.primary_confidence_calculator.calculate(compile_translations_dict(primary_translations, secondary_translations))
                     if self.logger:
                         self.logger.info(f"        Secondary translation chosen for {prop_name}: '{best_translation}' with confidence {secondary_confidence}")
                 # Add the best translation as a new literal for the property in the target language.
                 graph.add((concept, SKOS_TERM_PROPERTIES[prop_name], Literal(best_translation, lang=target_lang)))
 
-        # Serialize the updated graph.
+        # Update and safe graph
         if output_file == "default":
             stem, suffix = input_file.rsplit(".", 1)
             output_file = f"{stem}_updated.{suffix}"

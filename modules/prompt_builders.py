@@ -1,7 +1,7 @@
 # modules/prompt_builders.py
 from typing import List, Any
 from modules.prompt_components import PromptComposer
-from modules.prompt_formatters import OpenAIPromptFormatter, OllamaPromptFormatter, DummyPromptFormatter
+from modules.prompt_formatters import OpenAIPromptFormatter, OllamaPromptFormatter, MistralPromptFormatter, DummyPromptFormatter
 
 class PromptBuilder:
     def __init__(self, components: List, service_name: str):
@@ -10,10 +10,13 @@ class PromptBuilder:
             self.formatter = OpenAIPromptFormatter()
         elif service_name.lower() == "ollama":
             self.formatter = OllamaPromptFormatter()
+        elif service_name.lower() == "mistral":
+            self.formatter = MistralPromptFormatter()
         elif service_name.lower() == "dummy":
             self.formatter = DummyPromptFormatter()
         else:
-            raise ValueError(f"Unsupported secondary translation service: {service_name}.")
+            # use OpenAI formatter if there is no specific formatter for the used service
+            self.formatter = OpenAIPromptFormatter()
             
 
     def build_prompt(self, target_lang: str) -> Any:
