@@ -1,0 +1,922 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:ns1="http://purl.org/iso25964/skos-thes#"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <dcterms:created>2015-09-17</dcterms:created>
+    <dcterms:creator xml:lang="el">Καλαφατά Πατρίτσια (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Χρυσοβιτσάνος Γεράσιμος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Κατσιαδάκη Ελένη (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Τερζής Χρήστος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Γουλή Ελένη (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Καρασίμος Αθανάσιος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Ιακωβίδου Αθηνά (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Μεργούπη-Σαβαΐδου Ειρήνη (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Σίνου Χριστίνα (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Σουγιουλτζόγλου Ηράκλειτος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Τζεδόπουλος Γιώργος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Φαλιέρου Αναστασία (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Χατζημιχαήλ Χρήστος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Δασκαλοθανάσης Νίκος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Γεωργόπουλος Θεόδωρος (ΕΚΠΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Κατάκης Στυλιανός (ΕΚΠΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Σιχάνη Άννα-Μαρία (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Δημακοπούλου Χριστίνα (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Χατζή Μαρία (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Γαρδίκα Κατερίνα (ΕΚΠΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Γκάντζιος-Ντραπέλοβα Παύλα (ΕΚΠΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Θεοδωρίδου Δήμητρα (ΕΚΠΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Κωνσταντέλλου Θεοδώρα (ΕΚΠΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="el">Παπαδοπούλου Γεωργία (ΕΚΠΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Georgopoulos Theodoros (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Georgopoulos Theodoros (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Georgopoulos Theodoros (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Katsiadakis Helen (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Katsiadakis Helen (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Katsiadakis Helen (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Iakovidou Athena (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Iakovidou Athena (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Iakovidou Athena (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Chrysovitsanos Gerasimos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Chrysovitsanos Gerasimos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Chrysovitsanos Gerasimos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Kalafata Patritsia (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Kalafata Patritsia (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Kalafata Patritsia (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Goulis Helen (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Goulis Helen (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Goulis Helen (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Chatzimichail Christos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Chatzimichail Christos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Chatzimichail Christos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Tzedopoulos Giorgos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Tzedopoulos Giorgos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Tzedopoulos Giorgos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Terzis Christos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Terzis Christos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Terzis Christos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Karasimos Athanasios (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Karasimos Athanasios (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Karasimos Athanasios (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Daskalothanasis Nikos (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Daskalothanasis Nikos (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Daskalothanasis Nikos (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Sinou Christina (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Sinou Christina (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Sinou Christina (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Chatzi Maria (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Chatzi Maria (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Chatzi Maria (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Falierou Anastasia (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Falierou Anastasia (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Falierou Anastasia (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Dimakopoulou Christina (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Dimakopoulou Christina (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Dimakopoulou Christina (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Mergoupi-Savaidou Eirini (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Mergoupi-Savaidou Eirini (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Mergoupi-Savaidou Eirini (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Katakis Stelios (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Katakis Stelios (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Katakis Stelios (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Drapelova Pavla (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Drapelova Pavla (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Drapelova Pavla (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Gardika Katerina (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Gardika Katerina (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Gardika Katerina (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Konstantellou Dora (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Konstantellou Dora (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Konstantellou Dora (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Papadopoulou Georgia (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Papadopoulou Georgia (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Papadopoulou Georgia (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Theodoridou Dimitra (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Theodoridou Dimitra (UOA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Theodoridou Dimitra (UOA)</dcterms:creator>
+    <dcterms:description xml:lang="de">The Thesaurus is the intellectual property of the Academy of Athens (AA), the National and Kapodistrian University of Athens (UOA) and the Athens School of Fine Arts (ASFA). It was created as a collaborative effort and was compiled during the course of the project DARIAH GR: Developing a Greek Research Infrastructure for Arts and Humanities (2013-2015) and of the project APOLLONIS: Greek Infrastructure for Humanities, Arts and Language Research and Innovation (2017-2020). It is maintained by the Academy of  Athens. It is the outcome of an attempt to create a multilingual structured thesaurus of use to humanities scholars. It is a specialist thesaurus based on the principles, methodology and hierarchies of the BBT.</dcterms:description>
+    <dcterms:description xml:lang="el">Ο Θησαυρός είναι πνευματική ιδιοκτησία της Ακαδημίας Αθηνών (ΑΑ), του Εθνικού και Καποδιστριακού Πανεπιστημίου Αθηνών (ΕΚΠΑ) και της Ανωτάτης Σχολής Καλών Τεχνών (ΑΣΚΤ). Αποτελεί μια συνεργατική προσπάθεια και δημιουργήθηκε κατά τη διάρκεια του προγράμματος DARIAH-GR: Ανάπτυξη της Ελληνικής Ερευνητικής Υποδομής για τις Ανθρωπιστικές Επιστήμες και τις Τέχνες (2013-2015) και του έργου ΑΠΟΛΛΩΝΙΣ: Εθνική Υποδομή για τις Ψηφιακές Ανθρωπιστικές Τέχνες και Επιστήμες και για τη Γλωσσική Έρευνα και Καινοτομία (2017-2020). Διατηρείται και υποστηρίζεται από την Ακαδημία Αθηνών. Είναι το αποτέλεσμα μιας προσπάθειας να δημιουργηθεί ένας πολύγλωσσος δομημένος θησαυρός για χρήση από τους ερευνητές των ανθρωπιστικών επιστημών. Είναι ένας ειδικός θησαυρός που βασίζεται στις αρχές, τη μεθοδολογία και τις ιεραρχίες του BBT.</dcterms:description>
+    <dcterms:description xml:lang="fr">The Thesaurus is the intellectual property of the Academy of Athens (AA), the National and Kapodistrian University of Athens (UOA) and the Athens School of Fine Arts (ASFA). It was created as a collaborative effort and was compiled during the course of the project DARIAH GR: Developing a Greek Research Infrastructure for Arts and Humanities (2013-2015) and of the project APOLLONIS: Greek Infrastructure for Humanities, Arts and Language Research and Innovation (2017-2020). It is maintained by the Academy of  Athens. It is the outcome of an attempt to create a multilingual structured thesaurus of use to humanities scholars. It is a specialist thesaurus based on the principles, methodology and hierarchies of the BBT.</dcterms:description>
+    <dcterms:description xml:lang="la">The Thesaurus is the intellectual property of the Academy of Athens (AA), the National and Kapodistrian University of Athens (UOA) and the Athens School of Fine Arts (ASFA). It was created as a collaborative effort and was compiled during the course of the project DARIAH GR: Developing a Greek Research Infrastructure for Arts and Humanities (2013-2015) and of the project APOLLONIS: Greek Infrastructure for Humanities, Arts and Language Research and Innovation (2017-2020). It is maintained by the Academy of  Athens. It is the outcome of an attempt to create a multilingual structured thesaurus of use to humanities scholars. It is a specialist thesaurus based on the principles, methodology and hierarchies of the BBT.</dcterms:description>
+    <dcterms:format>application/rdf+xml</dcterms:format>
+    <dcterms:format>application/x-turtle</dcterms:format>
+    <dcterms:issued>2020-10-21</dcterms:issued>
+    <dcterms:language xml:lang="el">Ελληνικά</dcterms:language>
+    <dcterms:language xml:lang="el">Αγγλικά</dcterms:language>
+    <dcterms:language xml:lang="de">Greek</dcterms:language>
+    <dcterms:language xml:lang="fr">Greek</dcterms:language>
+    <dcterms:language xml:lang="la">Greek</dcterms:language>
+    <dcterms:language xml:lang="de">English</dcterms:language>
+    <dcterms:language xml:lang="fr">English</dcterms:language>
+    <dcterms:language xml:lang="la">English</dcterms:language>
+    <dcterms:modified>2020-11-11</dcterms:modified>
+    <dcterms:rights>https://creativecommons.org/licenses/by/4.0/</dcterms:rights>
+    <dcterms:subject xml:lang="el">Γλωσσολογία</dcterms:subject>
+    <dcterms:subject xml:lang="el">Βυζαντινή αρχαιολογία</dcterms:subject>
+    <dcterms:subject xml:lang="el">Επιγραφική</dcterms:subject>
+    <dcterms:subject xml:lang="el">Μουσικολογία</dcterms:subject>
+    <dcterms:subject xml:lang="el">Προϊστορική αρχαιολογία</dcterms:subject>
+    <dcterms:subject xml:lang="el">Νομισματική</dcterms:subject>
+    <dcterms:subject xml:lang="el">Λογοτεχνικές σπουδές</dcterms:subject>
+    <dcterms:subject xml:lang="el">Αρχαία ιστορία</dcterms:subject>
+    <dcterms:subject xml:lang="el">Θεατρικές σπουδές</dcterms:subject>
+    <dcterms:subject xml:lang="el">Ιστορία και φιλοσοφία των επιστημών</dcterms:subject>
+    <dcterms:subject xml:lang="el">Κλασικές σπουδές</dcterms:subject>
+    <dcterms:subject xml:lang="el">Κλασική αρχαιολογία</dcterms:subject>
+    <dcterms:subject xml:lang="el">Νεότερη και σύγχρονη ιστορία</dcterms:subject>
+    <dcterms:subject xml:lang="de">Ancient history</dcterms:subject>
+    <dcterms:subject xml:lang="el">Ανθρωπολογία και εθνολογία</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Ancient history</dcterms:subject>
+    <dcterms:subject xml:lang="la">Ancient history</dcterms:subject>
+    <dcterms:subject xml:lang="de">Anthropology and ethnology</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Anthropology and ethnology</dcterms:subject>
+    <dcterms:subject xml:lang="la">Anthropology and ethnology</dcterms:subject>
+    <dcterms:subject xml:lang="de">Art and history of art</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Art and history of art</dcterms:subject>
+    <dcterms:subject xml:lang="la">Art and history of art</dcterms:subject>
+    <dcterms:subject xml:lang="de">Byzantine archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Byzantine archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="la">Byzantine archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="de">Classical archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Classical archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="la">Classical archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="de">Classical studies</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Classical studies</dcterms:subject>
+    <dcterms:subject xml:lang="la">Classical studies</dcterms:subject>
+    <dcterms:subject xml:lang="de">Epigraphy</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Epigraphy</dcterms:subject>
+    <dcterms:subject xml:lang="la">Epigraphy</dcterms:subject>
+    <dcterms:subject xml:lang="de">History and philosophy of sciences</dcterms:subject>
+    <dcterms:subject xml:lang="fr">History and philosophy of sciences</dcterms:subject>
+    <dcterms:subject xml:lang="la">History and philosophy of sciences</dcterms:subject>
+    <dcterms:subject xml:lang="de">Linguistics</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Linguistics</dcterms:subject>
+    <dcterms:subject xml:lang="la">Linguistics</dcterms:subject>
+    <dcterms:subject xml:lang="de">Literary studies</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Literary studies</dcterms:subject>
+    <dcterms:subject xml:lang="la">Literary studies</dcterms:subject>
+    <dcterms:subject xml:lang="de">Modern and contemporary history</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Modern and contemporary history</dcterms:subject>
+    <dcterms:subject xml:lang="la">Modern and contemporary history</dcterms:subject>
+    <dcterms:subject xml:lang="de">Musicology</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Musicology</dcterms:subject>
+    <dcterms:subject xml:lang="la">Musicology</dcterms:subject>
+    <dcterms:subject xml:lang="de">Numismatics</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Numismatics</dcterms:subject>
+    <dcterms:subject xml:lang="la">Numismatics</dcterms:subject>
+    <dcterms:subject xml:lang="de">Prehistoric archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Prehistoric archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="la">Prehistoric archaeology</dcterms:subject>
+    <dcterms:subject xml:lang="de">Theatre studies</dcterms:subject>
+    <dcterms:subject xml:lang="el">Τέχνη και ιστορία της τέχνης</dcterms:subject>
+    <dcterms:subject xml:lang="fr">Theatre studies</dcterms:subject>
+    <dcterms:subject xml:lang="la">Theatre studies</dcterms:subject>
+    <dcterms:title xml:lang="el">Θησαυρός Ανθρωπιστικών Επιστημών ΔΥΑΣ</dcterms:title>
+    <dcterms:title xml:lang="de">DYAS Humanities Thesaurus</dcterms:title>
+    <dcterms:title xml:lang="fr">DYAS Humanities Thesaurus</dcterms:title>
+    <dcterms:title xml:lang="la">DYAS Humanities Thesaurus</dcterms:title>
+    <owl:versionInfo>3.1</owl:versionInfo>
+    <skos:prefLabel>HUMANITIES-THESAURUS</skos:prefLabel>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/51">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-14</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>51</skos:notation>
+    <skos:prefLabel xml:lang="el">Ιμπρεσιονισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Κίνημα της ζωγραφικής που πρωτοεμφανίστηκε στη δεκαετία του 1860 στη Γαλλία. Αντέδρασε στην ακαδημαϊκή διδασκαλία και τη συμβατικότητα και επαναστάτησε κατά της βασικής αρχής του Ρομαντισμού, ότι η τέχνη πρέπει να μεταδίδει έντονα προσωπικά συναισθήματα. Ουσιαστικά, δεν ενδιαφέρεται για την απεικόνιση των αντικειμένων αυτών καθ’ εαυτά, αλλά για τη χρωματική εντύπωση που προκαλούν σε σχέση με το φως που επικρατεί.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-01-20</dcterms:created>
+    <dcterms:creator xml:lang="el">Σιχάνη Άννα-Μαρία (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/30"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/247"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/159"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/213"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/324"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/310"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/255"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/51"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/343"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/217"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/241"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/57"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/313"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/269"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/113"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/170"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/41"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/221"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/292"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/96"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/2022"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/59"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/233"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/60"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/249"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/311"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/344"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/293"/>
+    <skos:notation>27</skos:notation>
+    <skos:prefLabel xml:lang="el">Καλλιτεχνικά ρεύματα</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">O όρος περιλαμβάνει τύπους φαινομένων που εμφανίζουν συνοχή ως προς την τεχνοτροπία, τη θεματική και τα μορφολογικά στοιχεία που υιοθετούνται στην τέχνη και την αρχιτεκτονική και τα οποία μπορούν να οριοθετηθούν χωροχρονικά.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/221">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-14</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>221</skos:notation>
+    <skos:prefLabel xml:lang="el">Νεοκλασικισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Το κυρίαρχο κίνημα στην ευρωπαϊκή τέχνη και την αρχιτεκτονική στα τέλη του 18ου και τις αρχές του 19ου αιώνα το οποίο χαρακτηρίστηκε από την επιθυμία της αναδημιουργίας του πνεύματος και των μορφών της ελληνικής και ρωμαϊκής τέχνης. Θεωρήθηκε ένα είδος αντίδρασης ενάντια στο ανέμελο και ελαφρύ ύφος Ροκοκό.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/2022">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Δασκαλοθανάσης Νίκος (ΑΣΚΤ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Daskalothanasis Nikos (ASFA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Daskalothanasis Nikos (ASFA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Daskalothanasis Nikos (ASFA)</dcterms:contributor>
+    <dcterms:created>2019-09-16</dcterms:created>
+    <dcterms:creator xml:lang="el">Χατζή Μαρία (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Chatzi Maria (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Chatzi Maria (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Chatzi Maria (ASFA)</dcterms:creator>
+    <dcterms:modified>2020-10-11</dcterms:modified>
+    <dcterms:source>Grove (Oxford) Dictionary of Art</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>2022</skos:notation>
+    <skos:prefLabel xml:lang="el">Οριενταλισμός (Ιστορία της Τέχνης)</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Τάση στην δυτική τέχνη&amp;nbsp;η οποία εμπνέεται από τον ασαφώς οριζόμενο πολιτισμικό χώρο της &amp;laquo;Ανατολής&amp;raquo; έτσι όπως αυτός γινόταν αντιληπτός με βάση τα ιδεολογικά στερεότυπα της Δύσης του 19ου αιώνα.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/310">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-29</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>310</skos:notation>
+    <skos:prefLabel xml:lang="el">Εξπρεσιονισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Όρος που χρησιμοποιείται στην Ιστορία της Τέχνης για να δηλώσει τη χρήση της παραμόρφωσης και της υπερβολής για την απόδοση μιας συναισθηματικής εντύπωσης. Στην ευρύτερη έννοιά του μπορεί να χρησιμοποιηθεί για κάθε μορφή τέχνης που ενισχύει το υποκειμενικό συναίσθημα παρά την αντικειμενική παρατήρηση και καθρεφτίζει περισσότερο τη συναισθηματική κατάσταση του καλλιτέχνη παρά τις εικόνες που εναρμονίζονται με τον εξωτερικό κόσμο. Με πιο συγκεκριμένη έννοια, ο όρος αναφέρεται σε μια ευρεία τάση της σύγχρονης ευρωπαϊκής τέχνης με αφετηρία τη ζωγραφική του Βαν Γκογκ και του Γκωγκέν.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/213">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1997</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>213</skos:notation>
+    <skos:prefLabel xml:lang="el">Εκλεκτικισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Ασαφής όρος που περιγράφει μια τεχνοτροπία η οποία συνδυάζει χαρακτηριστικά δανεισμένα από διάφορες πηγές. Μια τέτοια τεχνοτροπία συχνά προκύπτει από το αξίωμα ότι στοιχεία της υπεροχής των μεγάλων δασκάλων μπορούν να επιλεγούν και να συνδυαστούν σε ένα έργο τέχνης. O ιστορικός Eκλεκτικισμός αποτελεί τάση της αρχιτεκτονικής των τελευταίων δεκαετιών του 19ου αιώνα.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/41">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-14</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>41</skos:notation>
+    <skos:prefLabel xml:lang="el">Νατουραλισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Στη ζωγραφική, ο όρος υποδηλώνει την πιστή αναπαράσταση της φύσης. Στο δεύτερο μισό του 19ου αιώνα ο Νατουραλισμός, ο οποίος δεν διαχωρίζεται πάντοτε εύκολα από τον Ρεαλισμό, επικεντρώθηκε στην απεικόνιση της ασήμαντης κυρίως πλευράς της καθημερινότητας.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/217">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1997</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>217</skos:notation>
+    <skos:prefLabel xml:lang="el">Κυβισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Κίνημα της ζωγραφικής και λιγότερο της γλυπτικής. Εμφανίστηκε το 1907 περίπου και θεωρείται από τους σημαντικότερους σταθμούς της δυτικής τέχνης. Οι Κυβιστές ήθελαν να περιγράψουν τα αντικείμενα όπως αυτά είναι γνωστά, παρά όπως εμφανίζονται σε μια συγκεκριμένη στιγμή και σε έναν συγκεκριμένο χώρο. Γι’ αυτό διέλυσαν τις φόρμες σε μία πληθώρα από όψεις, αποφεύγοντας να τις περιγράψουν από μια συγκεκριμένη γωνία. Έτσι, πολλές διαφορετικές όψεις του ίδιου αντικειμένου αναπαριστάνονταν ταυτοχρόνως. Ο Κυβισμός είχε ατελείωτες δυνατότητες προσαρμογής και αποτέλεσε το έναυσμα για τη δημιουργία πολλών άλλων κινημάτων, όπως ο Φουτουρισμός και ο Κονστρουκτιβισμός.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/247">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1997</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>247</skos:notation>
+    <skos:prefLabel xml:lang="el">Αναγέννηση</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">Renaissance</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Όρος που σημαίνει τη νέα γέννηση και περικλείει την πνευματική και καλλιτεχνική κίνηση η οποία γεννήθηκε στην Ιταλία το 14ο αιώνα, αναπτύχθηκε εκεί το 16ο αιώνα και επηρέασε όλη την Ευρώπη. Η έννοια της Αναγέννησης περικλείει την αναβίωση των αξιών του αρχαίου κλασικού κόσμου και η ιδέα χρησιμοποιήθηκε ήδη από τον 15ο αιώνα από Ιταλούς που θεωρούσαν ότι βίωναν μια εποχή όπου οι αξίες της αρχαίας τέχνης άνθιζαν και πάλι μετά από αιώνες σκοταδισμού.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/324">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1997</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>324</skos:notation>
+    <skos:prefLabel xml:lang="el">Εννοιακή Τέχνη</skos:prefLabel>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/1250"/>
+    <skos:scopeNote xml:lang="el">Όρος που εκφράζει διάφορες μορφές τέχνης και όπου η πρωταρχική ιδέα ενός έργου θεωρείται πιο σημαντική από την τελική πραγμάτωσή του, αν υπάρξει. Οι περισσότεροι καλλιτέχνες που ασπάζονται την Εννοιακή Τέχνη δημιουργούν έργα οπτικώς αδιάφορα, προκειμένου να προκαλέσουν την προσοχή στην "ιδέα" που θέλουν να εκφράσουν. Ως τάση εμφανίζεται στα μέσα της δεκαετίας του 1960.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/159">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Delahunt 1996-2010</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>159</skos:notation>
+    <skos:prefLabel xml:lang="el">Τέχνη του Σώματος</skos:prefLabel>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/1004"/>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/1250"/>
+    <skos:scopeNote xml:lang="el">Είδος τέχνης η οποία χρησιμοποιεί το σώμα ως καλλιτεχνικό μέσο. Εμφανίζεται τη δεκαετία του 1960 και αποτελεί πρόδρομο της Περφόρμανς. Λόγω του εφήμερου χαρακτήρα της τα έργα της Τέχνης του Σώματος τεκμηριώνονται μέσω φωτογραφιών ή κειμένων.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/233">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-14</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>233</skos:notation>
+    <skos:prefLabel xml:lang="el">Ρομαντισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Κίνημα της τέχνης που εμφανίστηκε στο τέλος του 18ου και στις αρχές του 19ου αιώνα. Βασική αρχή του είναι η πίστη στην αξία της έκφρασης του ατομικού βιώματος. Η θέση του αυτή τον αντιδιαστέλλει με τον ορθολογισμό του Διαφωτισμού και την τάξη του Nεοκλασικισμού.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/295">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Κατσιαδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:created>2015-05-22</dcterms:created>
+    <dcterms:creator xml:lang="el">Σουγιουλτζόγλου Ηράκλειτος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:modified>2020-08-26</dcterms:modified>
+    <dcterms:source>Καραπατάκης 1981</dcterms:source>
+    <dcterms:source>Λουκάτος 1997</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:altLabel xml:lang="el">Δωδεκάμερο</skos:altLabel>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/30"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>295</skos:notation>
+    <skos:prefLabel xml:lang="el">Δωδεκαήμερο</skos:prefLabel>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/760"/>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/345"/>
+    <skos:scopeNote xml:lang="el">Το χρονικό διάστημα που στη χριστιανική παράδοση οριοθετείται από τις γιορτές των Χριστουγέννων και των Θεοφανίων. Αποτελεί περίοδο έντονης κοινωνικής και θρησκευτικής δραστηριότητας, κατά τη διάρκεια της οποίας λαμβάνουν χώρα ποικίλες εκδηλώσεις και έθιμα.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/293">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-01-20</dcterms:created>
+    <dcterms:creator xml:lang="el">Σιχάνη Άννα-Μαρία (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:altLabel xml:lang="el">Φωτογραφικός Ρεαλισμός</skos:altLabel>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>293</skos:notation>
+    <skos:prefLabel xml:lang="el">Φωτορεαλισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Πρόκειται για κίνημα που εμφανίστηκε στην Ευρώπη και στις ΗΠΑ στη δεκαετία του 1970 με τάση προς την πιστή απόδοση της πραγματικότητας. Τα θέματα απεικονίζονται με σχολαστική και απρόσωπη ακρίβεια στη λεπτομέρεια. Ο Φωτογραφικός Ρεαλισμός (ή Φωτορεαλισμός) είναι εναλλακτική ονομασία του Υπερρεαλισμού.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/292">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>292</skos:notation>
+    <skos:prefLabel xml:lang="el">Νεοϊμπρεσιονισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Όρος επινοημένος το 1886 για ένα κίνημα στη γαλλική ζωγραφική που αποτελούσε ταυτόχρονα διεύρυνση του Ιμπρεσιονισμού και αντίδραση εναντίον του. Πρωταρχικό ενδιαφέρον των Νεοϊμπρεσιονιστών, όπως και των Ιμπρεσιονιστών, ήταν η απόδοση του φωτός και του χρώματος, αλλά, όπου ο Ιμπρεσιονισμός λειτουργούσε εμπειρικά και αυθόρμητα, ο Νεοϊμπρεσιονισμός βασιζόταν σε επιστημονικές αρχές, καταλήγοντας σε έντονα μοφοποιημένες συνθέσεις. Η θεωρητική βάση του Νεοϊμπρεσιονισμού ήταν ο Ντιβιζιονισμός, μαζί με τη σχετική τεχνική του Πουαντιγισμού.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/60">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:altLabel xml:lang="el">Υπερρεαλισμός</skos:altLabel>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>60</skos:notation>
+    <skos:prefLabel xml:lang="el">Σουρρεαλισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Κίνημα στην τέχνη και τη λογοτεχνία. Γεννήθηκε στη Γαλλία, άνθησε κατά τη δεκαετία του 1920 και 1930 και χαρακτηρίζεται από το θαυμασμό για το παράδοξο, το αταίριαστο και το παράλογο. Στόχος των Σουρεαλιστών ήταν να αναμίξουν το λογικό με το άλογο, και, χρησιμοποιώντας τα όνειρα, το στοιχείο του τυχαίου και έναν πέρα από κάθε ηθική μέριμνα αυτοματισμό, να δημιουργήσουν μια υπερ-πραγματικότητα.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/30">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor>curatorDHT</dcterms:contributor>
+    <dcterms:created>2015-04-22</dcterms:created>
+    <dcterms:creator>admin</dcterms:creator>
+    <dcterms:modified>2019-12-11</dcterms:modified>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:exactMatch rdf:resource="https://vocabs.dariah.eu/bbt/Concept/000005"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/295"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:narrower rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/274"/>
+    <skos:notation>30</skos:notation>
+    <skos:prefLabel xml:lang="el">Εποχές</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Περιλαμβάνει τύπους πολιτισμικών, κοινωνικών, διανοητικών φαινομένων που χαρακτηρίζονται από συνοχή δημιουργώντας νοητές ενότητες. Η συνοχή αυτή συγκροτείται λόγω της παρουσίασης ενός τουλάχιστον ποιοτικού στοιχείου που εμφανίζουν σύνολα φαινόμενων χωροχρονικά οριοθετημένων. Η χωροχρονική οριοθέτηση αποτελεί μορφικό χαρακτηριστικό του θέματος «Εποχές», δεν αναφέρεται δηλαδή σε συγκεκριμένες πραγματώσεις του θέματος αυτού. Κατά συνέπεια, στο θέμα αυτό δεν περιλαμβάνονται τα στιγμιότυπα εποχών όπως η Αναγέννηση ή η Ρωμαϊκή περίοδος, ή η περίοδος των βαλκανικών πολέμων κτλ., αλλά οι τύποι κατηγοριοποίησής τους, δηλαδή οι αφηρημένες έννοιες, βάσει των οποίων είναι δυνατός ο εν γένει προσδιορισμός της συνοχής στην εμφάνιση πολιτισμικών, κοινωνικών και διανοητικών φαινομένων.</skos:scopeNote>
+    <skos:topConceptOf rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/57">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>57</skos:notation>
+    <skos:prefLabel xml:lang="el">Μεταμοντερνισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Ο όρος απέκτησε ευρύτατη διάδοση μετά το 1970. Στη ζωγραφική πήρε την έννοια του "τέλους του Mοντερνισμού" και δήλωνε την τάση αξιοποίησης όλων των δυνατοτήτων του ιστορικού παρελθόντος χωρίς οποιαδήποτε προκατάληψη.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/255">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Κατσιαδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:created>2015-01-20</dcterms:created>
+    <dcterms:creator xml:lang="el">Σιχάνη Άννα-Μαρία (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Sichani Anna-Maria (AA)</dcterms:creator>
+    <dcterms:modified>2020-04-08</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>255</skos:notation>
+    <skos:prefLabel xml:lang="el">Ρεαλισμός</skos:prefLabel>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/1912"/>
+    <skos:scopeNote xml:lang="el">Όρος που χρησιμοποιείται για να υποδηλώσει κάθε τέχνη που προσπαθεί να αποδώσει πιστά τη ζωή. Η πιο εξειδικευμένη σημασία του όρου (συνήθως, όπως εδώ, γράφεται με Ρ κεφαλαίο) αναφέρεται σε ένα κίνημα της τέχνης (κυρίως της γαλλικής) του 19ου αιώνα, το οποίο χαρακτηρίζεται από μια επανάσταση ενάντια στα παραδοσιακά ιστορικά, μυθολογικά και θρησκευτικά θέματα, προς χάριν των ανεπιτήδευτων σκηνών της σύγχρονης ζωής. Επιδίωξη του Ρεαλισμού, που η εμφάνισή του αποτέλεσε ένα είδος αντίδρασης στον άκρατο υποκειμενισμό του Ρομαντισμού, ήταν η απεικόνιση της καθημερινής ζωής και των καθημερινών ηθών.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/113">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-29</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>The J. Paul Getty Trust 2015</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>113</skos:notation>
+    <skos:prefLabel xml:lang="el">Μοντερνισμός</skos:prefLabel>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/150"/>
+    <skos:scopeNote xml:lang="el">Με τον όρο αυτό χαρακτηρίζονται όχι μόνο οι τεχνικές και αισθητικές προϋποθέσεις του έργου τέχνης αλλά και τα ιστορικοπνευματικά δεδομένα στα οποία βασίζεται. Αντιτίθεται στην παράδοση και αναζητεί ανεξάρτητες από αυτήν εκφραστικές νόρμες. Τον Mοντερνισμό διαδέχθηκε το κίνημα του Mεταμοντερνισμού που ξεκίνησε περί το 1970.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/344">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>344</skos:notation>
+    <skos:prefLabel xml:lang="el">Φωβισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Ζωγραφικό ύφος που βασίζεται στη χρήση έντονα ζωηρών, μη νατουραλιστικών χρωμάτων, η πρώτη από τις μεγάλες πρωτοποριακές εξελίξεις της ευρωπαϊκής τέχνης μεταξύ της αλλαγής του αιώνα και του Πρώτου Παγκοσμίου Πολέμου. Αν και βραχύβιο κίνημα ο Φωβισμός άσκησε πολύ σημαντική επιρροή, ιδιαίτερα στην εξέλιξη του γερμανικού Εξπρεσιονισμού.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/311">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>311</skos:notation>
+    <skos:prefLabel xml:lang="el">Φουτουρισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Πρωτοποριακό καλλιτεχνικό κίνημα που ιδρύθηκε το 1909 στην Ιταλία. Στόχος του ήταν να αποδεσμευτεί από το παρελθόν και την ακαδημαϊκή του κουλτούρα και να δοξάσει τη μοντέρνα τεχνολογία, την ενεργητικότητα και τη δύναμη.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/269">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:altLabel xml:lang="el">Ελάχιστη Τέχνη</skos:altLabel>
+    <skos:altLabel xml:lang="el">Τέχνη του Ελαχίστου</skos:altLabel>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>269</skos:notation>
+    <skos:prefLabel xml:lang="el">Μινιμαλισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Καλλιτεχνικό κίνημα και ύφος της δεκαετίας του 1960. Ξεκίνησε από τις Ηνωμένες Πολιτείες και αρχικά αφορούσε κυρίως τρισδιάστατα. Ο Μινιμαλισμός τείνει προς την αφαίρεση, προσπαθώντας να επιστρέψει σε πρωταρχικές δομές, χωρίς διακοσμητικά πρόσθετα αντικείμενα.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/343">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Delahunt 1996-2010</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>343</skos:notation>
+    <skos:prefLabel xml:lang="el">Κονστρουκτιβισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Καλλιτεχνικό κίνημα που εμφανίσθηκε στην προεπαναστατική Ρωσία. Στόχευε στην κατασκευή έργων που θα είχαν χρηστική λειτουργία και θα λάμβαναν υπόψη τόσο τη νέα τεχνολογία όσο και το υλικό κατασκευής (γυαλί, πλαστικό, σίδερο κλπ.).</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/241">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>241</skos:notation>
+    <skos:prefLabel xml:lang="el">Μανιερισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Όρος που αναφέρεται: α) σε κάθε είδους εκζήτηση στο ύφος και β) ειδικότερα στην ιταλική ζωγραφική, γλυπτική και αρχιτεκτονική της περιόδου ανάμεσα στην ακμή της Αναγέννησης και το Μπαρόκ.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/313">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>313</skos:notation>
+    <skos:prefLabel xml:lang="el">Μεταϊμπρεσιονισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Όρος που αναφέρεται σε διάφορες τάσεις της ζωγραφικής που αναπτύχθηκαν από αντίδραση στον Ιμπρεσιονισμό κατά την περίοδο 1880-1905. Ιδιαίτερα αντέδρασε στην έμμονη ενασχόληση των ιμπρεσιονιστών με τα οπτικά φαινόμενα.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/170">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>170</skos:notation>
+    <skos:prefLabel xml:lang="el">Μπαρόκ</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Όρος, αρχικά υποτιμητικός, που αναφέρεται στην ευρωπαϊκή αρχιτεκτονική και ζωγραφική της περιόδου 1600-1750. Τυπικά χαρακτηριστικά του Μπαρόκ θεωρούνται η τάση να προκληθεί συγκίνηση, ψευδαισθητισμός, συγκερασμός των τεχνών, οπτική λαμπρότητα, αξιοποίηση της κίνησης, οργάνωση τoυ χώρου. Η τέχνη του Μπαρόκ συνδέεται στενά με το όλο κίνημα της Αντιμεταρρύθμισης.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/249">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-14</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>249</skos:notation>
+    <skos:prefLabel xml:lang="el">Συμβολισμός</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Χαλαρά οργανωμένο καλλιτεχνικό κίνημα, άμεσα συνδεδεμένο με το συμβολιστικό κίνημα της γαλλικής ποίησης, που άνθησε κατά τις δεκαετίες 1880 και 1890. Γεννήθηκε ως αντίδραση στους νατουραλιστικούς στόχους του Ιμπρεσιονισμού και ακόμη περισσότερο στις αρχές του Ρεαλισμού. Οι Συμβολιστές επιχείρησαν να δώσουν εικαστική έκφραση στο μυστικιστικό και στο απόκρυφο.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/96">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Malyon/Specifica 2014</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>96</skos:notation>
+    <skos:prefLabel xml:lang="el">Νταντά</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Κίνημα που γεννήθηκε στη Ζυρίχη το 1916. Αναπτύχθηκε και σε άλλες ευρωπαϊκές πόλεις ως αντίδραση στη λαίλαπα του Πρώτου Παγκοσμίου Πολέμου και των αξιών του δυτικού αστικού πολιτισμού που την εξέθρεψαν. Η χρήση της ειρωνείας, της αντικαλλιτεχνικής στάσης, της αναγωγής στο μη λογικό είναι ορισμένα από τα χαρακτηριστικά που καθόρισαν τις ενέργειες και τα έργα (συχνά βασισμένα σε καθημερινά αντικείμενα) του κινήματος.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/59">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Βερναρδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Vernardaki Eleni (AA)</dcterms:contributor>
+    <dcterms:created>2015-10-15</dcterms:created>
+    <dcterms:creator xml:lang="el">Ξηροπαϊδης Γιώργος (ΑΣΚΤ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Xiropaidis Georgios (ASFA)</dcterms:creator>
+    <dcterms:modified>2019-11-20</dcterms:modified>
+    <dcterms:source>Clarke 2001</dcterms:source>
+    <dcterms:source>Πανεπιστήμιο της Οξφόρδης 1998</dcterms:source>
+    <dcterms:source>Ρηντ κ.ά. 1986</dcterms:source>
+    <dcterms:source>Frazier 2000</dcterms:source>
+    <dcterms:source>Λυδάκης 2009</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/27"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>59</skos:notation>
+    <skos:prefLabel xml:lang="el">Ροκοκό</skos:prefLabel>
+    <skos:scopeNote xml:lang="el">Τάση στην τέχνη και την αρχιτεκτονική που χαρακτηρίζεται από φωτεινότητα, χάρη, ευθυμία και οικειότητα, η οποία γεννήθηκε στη Γαλλία περί το 1700 και διαδόθηκε σε όλη την Ευρώπη κατά το 18ο αιώνα. Κοινό στοιχείο του με το Μπαρόκ είναι η προτίμηση στις σύνθετες φόρμες, αλλά, αντί να επικεντρώνεται στη σταθερότητα και τη μάζα, χαρακτηρίζεται από ένα εκλεπτυσμένο επιφανειακό παιχνίδισμα. Κατά τη δεκαετία του 1760, το ρεύμα αυτό της αισθητικής άρχισε να στρέφεται από την ελαφρότητα και την ανεμελιά προς την αυστηρότητα του Νεοκλασικισμού.</skos:scopeNote>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/274">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <dcterms:contributor xml:lang="el">Κατσιαδάκη Ελένη (ΑΑ)</dcterms:contributor>
+    <dcterms:contributor xml:lang="de">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="fr">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:contributor xml:lang="la">Katsiadakis Helen (AA)</dcterms:contributor>
+    <dcterms:created>2015-08-25</dcterms:created>
+    <dcterms:creator xml:lang="el">Σουγιουλτζόγλου Ηράκλειτος (ΑΑ)</dcterms:creator>
+    <dcterms:creator xml:lang="de">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="fr">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:creator xml:lang="la">Souyioultzoglou Iraklitos (AA)</dcterms:creator>
+    <dcterms:modified>2020-08-26</dcterms:modified>
+    <dcterms:source>Χαραλαμπάκης 2014</dcterms:source>
+    <ns1:status>Εκδοθείς</ns1:status>
+    <skos:broader rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/30"/>
+    <skos:inScheme rdf:resource="https://humanitiesthesaurus.academyofathens.gr"/>
+    <skos:notation>274</skos:notation>
+    <skos:prefLabel xml:lang="el">Νηστεία (χρονική περίοδος)</skos:prefLabel>
+    <skos:related rdf:resource="https://humanitiesthesaurus.academyofathens.gr/dyas-resource/Concept/145"/>
+    <skos:scopeNote xml:lang="el">Η χρονική περίοδος εφαρμογής των κανόνων αποχής από τροφές ή/και πράξεις.</skos:scopeNote>
+  </rdf:Description>
+</rdf:RDF>
