@@ -1,10 +1,10 @@
 # WOKIE
 
 # General info
-WOKIE is a free, open-ource tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
+WOKIE is a free, open-source tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
 
 
-# Prerequisits
+# Prerequisites
 - Set up translation services that require API_KEYS (see .env.template).
 - Install Ollama app and run it if you want to use local language models.
 - Install LibreTranslate (pip install libretranslate) and run it with `libretranslate --load-only ar,de,en,es,fr,hu,it,nb,nl,pt,ru,sl` if you want to use argos translate. Add other languages if you need them. **Caution**: this does not work with Python 3.13.x (as of 01.05.2025).
@@ -12,7 +12,7 @@ WOKIE is a free, open-ource tool that automatically translates SKOS thesauri int
 # How to install
 - Tested with Python 3.11.12 on MacOS 15 and on Debian 12.
 
-1. Create virtual Python environment.
+1. Create a virtual Python environment.
 2. `pip3 install -r requirements.txt`
 3. `cp .env.template .env`
 4. Add API secrets and other required environment variables (depending on which services you want to use) to `.env`.
@@ -26,7 +26,7 @@ See `python main.py --help`.
 
 ## Demo example
 It is possible to try the code out without configuring any api_keys, by using only free translation services for demonstration purposes. There are the following restrictions:
-- All of the implemented LLMs need an API-Key. Therefore, only a Dummy LLM is used to make the example possible.
+- All of the implemented LLMs require an API-Key. Therefore, only a Dummy LLM is used to make the example possible.
 - Only two primary translation services are used in this demo. All the ones needing API-Keys or depend on locally running services are not used in the demo.
 - To show real translations (although of limited quality due to fewer primary services and lack of LLM-based refinement), we set `threshold` to 0 and `min_primary_translations` to 1 in this case. This means that the refinement will not be done. 
 ### Provided sample files
