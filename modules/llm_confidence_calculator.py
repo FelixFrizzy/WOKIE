@@ -1,4 +1,5 @@
 # LLM_confidence_calculator.py
+import logging
 from langcodes import Language
 import re
 import ollama 
@@ -21,7 +22,8 @@ class LLMConfidenceCalculator():
         """
         self.secondary_translation_service = secondary_translation_service
         self.max_retries = max_retries
-        self.logger = logger
+        self.logger: logging.Logger = logger or logging.getLogger(__name__)
+        self.service_name = "llmconfidencecalculator"
 
     def get_label_and_lang(self, label):
         """
@@ -54,26 +56,31 @@ class LLMConfidenceCalculator():
         """
         for desc, lang in term_descriptions:
             if lang.lower() == src_lang.lower():
-                return desc.strip()
+                return desc.strip() if isinstance(desc,str) else desc
         for desc, lang in term_descriptions:
             if lang.lower().startswith("en"):
-                return desc.strip()
+                return desc.strip() if isinstance(desc,str) else desc
         if term_descriptions:
-            return term_descriptions[0][0].strip()
+            return term_descriptions[0][0].strip() if isinstance(term_descriptions[0][0], str) else term_descriptions[0][0]
         return None
     
     def compile_translations(self, primary, secondary):
         """
-        Extract all strings from two translation vars (str, dict[str,str], or dict[str,list[str]]),
-        dedupe via a set, and return as a list. Raises TypeError on any unsupported type.
+        Extract all strings from two translation vars (str, dict[str,str], or dict[str,list[str]]).
+        deduplicated with using a set, and return as a list.
         """
         def extract_strings(data):
+            # handle None values or None input
+            if data is None:
+                return set()
             if isinstance(data, str):
                 return {data}
 
             if isinstance(data, dict):
                 result = set()
                 for v in data.values():
+                    if v is None:
+                        continue
                     # single string
                     if isinstance(v, str):
                         result.add(v)
@@ -81,12 +88,14 @@ class LLMConfidenceCalculator():
                     # list of strings
                     elif isinstance(v, list):
                         for item in v:
-                            if not isinstance(item, str):
+                            if isinstance(item, str):
+                                result.add(item)
+                            else:
                                 raise TypeError(f"List items must be str, got {type(item)}")
-                            result.add(item)
-
+                            
                     else:
-                        raise TypeError(f"Dict values must be str or list[str], got {type(v)}")
+                        print(f"Skipping unexpected value: {v} (type: {type(v)})")
+                        continue
                 return result
 
             # anything else is an error
@@ -97,7 +106,7 @@ class LLMConfidenceCalculator():
     
 
     def build_prompt(self, labels: list, translation_candidates, term_descriptions, vocab_context, user_context, target_lang_full):
-        instruction_prompt = """"
+        instruction_prompt = """
         You are a professional translation review system that assesses the quality of translations of a single term given in different source languages. The translations are already given by a translation system. Give me the best fitting translation out of the given list and a confidence how sure you are that the translation is accurate on a scale from 0 to 1. If no possible translation seems to be fitting, return None as best fitting translation and a confidence of 0.
         Criteria for high accuracy are:
         - The best fitting translation is already found in the already given possible translations
@@ -142,7 +151,7 @@ class LLMConfidenceCalculator():
             input_prompt += f"Additional context is: \n"
             input_prompt += user_context + "\n\n"
         input_prompt += "Return the best fitting translation and the confidence in this format:\n" \
-                "best fitting translation; confidence"
+                "<best fitting translation>; <confidence>"
         
         prompt["instructions"] = instruction_prompt
         prompt["input"] = input_prompt
@@ -163,6 +172,7 @@ class LLMConfidenceCalculator():
             src_lang_full = Language.make(language=src_lang).display_name()
             target_lang_full = Language.make(language=target_lang).display_name()
         
+        # The compiled translations consist of the primary and secondary translations, deduplicated.
         translation_candidates = self.compile_translations(primary_translations, secondary_translations)
 
         # Call the LLM with context_info being only the primary translations including language tags
@@ -170,6 +180,8 @@ class LLMConfidenceCalculator():
 
 
         return best_translation, confidence
+
+
 
     def _call_llm(self, labels: list[str], translation_candidates, term_descriptions, vocab_context, user_context, target_lang_full, logger=None):
         """
@@ -190,18 +202,24 @@ class LLMConfidenceCalculator():
 
             response = self.secondary_translation_service.rate_translation(prompt)
 
+            if not isinstance(response, str):
+                if logger:
+                    logger.warning("LLM returned None or non-string response; skipping this attempt.")
+                continue
+            response = response.strip()
             
             # Validate response using regex: capture everything before the first semicolon as translation,
             # and the first number (integer or decimal) as rating.
-            match = re.match(r'^(.*?)\s*;\s*([0-9]+(?:\.[0-9]+)?).*$', response)
+            pattern = r'^\s*(.*?)\s*;\s*([0-9]+(?:\.[0-9]+)?)'
+            match = re.search(pattern, response, flags=re.MULTILINE)
             if match:
                 # choose translation from re match, and remove any additional '' or whitespaces
-                best_translation = match.group(1).strip().strip("'")
-                confidence = float(match.group(2))
+                best_translation = match.group(1).strip().strip("'") if isinstance(match.group(1), str) else match.group(1)
+                confidence = float(match.group(2).strip().strip("'")) if isinstance(match.group(2), str) else float(match.group(2))
                 if translation_candidates and best_translation.lower() not in [translation_candidate.lower() for translation_candidate in translation_candidates]:
                     if logger:
                         logger.info(f"Best translation '{best_translation}' not found in primary_translations; retrying...")
-                    continue  # This moves the loop to the next attempt.
+                    continue  
 
                 if 0.0 <= confidence <= 1.0:
                     return best_translation, confidence
@@ -209,7 +227,8 @@ class LLMConfidenceCalculator():
 
 
         if logger:
-            logger.info("LLM did not return a valid response after maximum retries, proceeding to secondary translation service.")
+            logger.info("LLM did not return a valid response after maximum retries, falling back to primary confidence calculator.")
+            logger.debug(f"LLM reponse of last try: \n{response}")
         return None, None
     
 

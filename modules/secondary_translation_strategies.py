@@ -5,7 +5,7 @@ from collections import defaultdict, OrderedDict
 from modules.prompt_builders import PromptBuilder
 from modules.prompt_components import PromptComponent, TermLabelsComponent, TermDescriptionComponent, BroaderChainComponent, GeneralContextComponent, GenericComponent
 
-# --- Helper functions ---
+# Helper functions
 
 def get_label_and_lang(label):
     """
@@ -38,12 +38,12 @@ def choose_term_context(term_descriptions, src_lang):
     """
     for desc, lang in term_descriptions:
         if lang.lower() == src_lang.lower():
-            return desc.strip()
+            return desc.strip() if isinstance(desc,str) else desc
     for desc, lang in term_descriptions:
         if lang.lower().startswith("en"):
-            return desc.strip()
+            return desc.strip() if isinstance(desc,str) else desc
     if term_descriptions:
-        return term_descriptions[0][0].strip()
+        return term_descriptions[0][0].strip() if isinstance(term_descriptions[0][0], str) else term_descriptions[0][0]
     return None
 
 def group_labels_by_language(labels):
@@ -57,7 +57,6 @@ def group_labels_by_language(labels):
         grouped[lang].append(text)
     return grouped
 
-# --- Base Strategy Class ---
 class BaseSecondaryTranslationStrategy:
     def translate(self, labels, graph, concept, term_props, vocab_context, user_context,
                   secondary_translation_service, target_lang, logger=None):
@@ -67,16 +66,16 @@ class BaseSecondaryTranslationStrategy:
         raise NotImplementedError
 
 
-# --- Individual Label Strategy ---
 class IndividualLabelStrategy(BaseSecondaryTranslationStrategy):
     """
     Returns dict with languages as key and translation as value
+    Calculates the translations individually for each language tag using individual prompts.
     """
     def translate(self, labels, graph, concept, term_props, vocab_context, user_context,
                   secondary_translation_service, target_lang, logger=None):
         term_descriptions = get_term_descriptions(term_props)
-        #TODO check which fiels are used for descriptions
-        #TODO decide what to do if there are definitions in multiple languages
+        #TODO check which fiels are used for descriptions.
+        #TODO decide what to do if there are definitions in multiple languages.
         translations: Dict[str,str ] = {}
         # Get the service type from the secondary translation service.
         service_name = secondary_translation_service.service_name.lower()
@@ -86,7 +85,7 @@ class IndividualLabelStrategy(BaseSecondaryTranslationStrategy):
             src_lang_full = Language.make(language=src_lang).display_name()
             target_lang_full = Language.make(language=target_lang).display_name()
             # Build prompt components for individual strategy.
-            # Here we include the term label and its description.
+            # Include the term label and its description get included.
             components: List[PromptComponent] = [TermLabelsComponent(label_text)]
             if term_context:
                 components.append(TermDescriptionComponent(term_context))
@@ -109,13 +108,19 @@ class IndividualLabelStrategy(BaseSecondaryTranslationStrategy):
                 logger.debug(f"        Individual strategy prompt built: {final_prompt}")
             # Call the translation service with the final prompt.
             translation = secondary_translation_service.translate_with_context(final_prompt)
+            if isinstance(translation, str):
+                translation = translation.strip(" \t\n\r'\"")
             translations[f"{src_lang}"] = translation
             if logger:
                 logger.info(f"        Translation for '{label_text}' ({src_lang}) -> '{translation}' ({target_lang})")
         return translations
 
-# --- Batch Label Strategy ---
+#  Batch Label Strategy 
 class BatchLabelStrategy(BaseSecondaryTranslationStrategy):
+    """
+    Returns a single translation
+    Calculates the translations using all available languages for each language tag and compiles it into a single prompt.
+    """
     def translate(self, labels, graph, concept, term_props, vocab_context, user_context,
                   secondary_translation_service, target_lang, logger=None):
         term_descriptions = get_term_descriptions(term_props)
@@ -162,15 +167,15 @@ class BatchLabelStrategy(BaseSecondaryTranslationStrategy):
         if logger:
             logger.debug(f"        Batch translation prompt built:\n{final_prompt}")
         translation: str = secondary_translation_service.translate_with_context(final_prompt)
+        if isinstance(translation, str):
+            translation = translation.strip(" \t\n\r'\"")
         # returns a single translation
         return translation
-        # returns the same translation for all of the languages
-        # return [translation] * len(labels)
 
-# --- Hierarchy Strategy ---
+#  Hierarchy Strategy 
 class HierarchyStrategy(BaseSecondaryTranslationStrategy):
     """
-    Traverses the broader hierarchy (using skos:broader) from the current concept upward,
+    Traverses the broader hierarchy (using skos:broader) from the current concept up in the hierarchy,
     collects the prefLabels in an ordered chain, and builds a context string.
     
     The chain is formatted (for each language seperately):
@@ -180,9 +185,9 @@ class HierarchyStrategy(BaseSecondaryTranslationStrategy):
         Term3
         ...
     
-    If separate_language_prompts is False (batch mode), all language chains are combined into one prompt.
+    If separate_language_prompts is False, all language chains are combined into one prompt.
     If True, a separate prompt is built for each language and then the best translation is selected
-    using the confidence calculator (like in the individual strategy).
+    using the confidence calculator.
     If no broader terms are found, falls back to the IndividualLabelStrategy.
     """
     def translate(self, labels, graph, concept, term_props, vocab_context, user_context,
@@ -190,7 +195,7 @@ class HierarchyStrategy(BaseSecondaryTranslationStrategy):
         SKOS = rdflib.Namespace("http://www.w3.org/2004/02/skos/core#")
         broaderUri = SKOS.broader
 
-        # Fallback: if no broader term exists, delegate to IndividualLabelStrategy.
+        # Fallback: if no broader term exists, fall back to IndividualLabelStrategy.
         if not list(graph.objects(concept, broaderUri)):
             if logger:
                 logger.info("No broader terms found; falling back to IndividualLabelStrategy.")
@@ -201,14 +206,15 @@ class HierarchyStrategy(BaseSecondaryTranslationStrategy):
         if logger:
             logger.info("Broader terms found; using HierarchyStrategy.")
 
-        # Get all available languages from the concept's prefLabel.
+        # Get all available languages from the prefLabel.
         if "prefLabel" in term_props and term_props["prefLabel"]:
             available_languages = list(term_props["prefLabel"].keys())
         else:
             available_languages = ["en"]
 
+        # If separate_language_prompts false, build a single prompt for all languages
         if not separate_language_prompts:
-            # --- Batch Mode: Combine all language chains into one prompt ---
+            #  Combine all language chains into one prompt 
             language_sections = []
             for lang in available_languages:
                 chain = self._build_broader_chain(graph, concept, lang, target_lang)
@@ -222,8 +228,8 @@ class HierarchyStrategy(BaseSecondaryTranslationStrategy):
                 language_sections.append(chain_str)
             combined_chains = "\n".join(language_sections)
             target_lang_full = Language.make(language=target_lang).display_name()
-            # TODO the term that should be translated is missing here. it should go into the prompt
-            # TODO problem: the term should go into the prompt in all available languages
+            # TODO The term that should be translated is missing here. It should go into the prompt
+            # TODO Problem: the term should go into the prompt in all available languages
             overall_header = (f"Give me a single translation to {target_lang_full}.\n"
                               "Here are the hierarchy chains for the term in different languages.\n\n")
             overall_footer = "\nReturn only the translated term."
@@ -240,12 +246,13 @@ class HierarchyStrategy(BaseSecondaryTranslationStrategy):
                 logger.debug(f"Formatted final prompt:\n{final_prompt}")
 
             translation = secondary_translation_service.translate_with_context(final_prompt)
+            if isinstance(translation, str):
+                translation = translation.strip(" \t\n\r'\"")
             # returns a single translation
             return translation
-            # returns the same translation for all of the languages
-            # return [translation] * len(labels)
+        
+        # If separate_language_prompts true, build individual prompts for all languages and select best translation
         else:
-            # --- Individual Mode: Build a separate prompt for each language and select the best translation ---
             translations: Dict[str, str] = {}
             # individual_prompts = []
             for src_lang in available_languages:
@@ -271,10 +278,12 @@ class HierarchyStrategy(BaseSecondaryTranslationStrategy):
                     logger.debug(f"        Built individual hierarchy chain prompt for language {src_lang}:\n{final_prompt}")
                 
                 translation = secondary_translation_service.translate_with_context(final_prompt)
+                if isinstance(translation, str):
+                    translation = translation.strip(" \t\n\r'\"")
                 translations[f"{src_lang}"] = translation
 
                 if logger:
-                    logger.info(f"        Translation for '{current_label}' ({src_lang}) -> '{translation[f'{src_lang}']}' ({target_lang})")
+                    logger.info(f"        Translation for '{current_label}' ({src_lang}) -> '{translations[f'{src_lang}']}' ({target_lang})")
 
             return translations
 

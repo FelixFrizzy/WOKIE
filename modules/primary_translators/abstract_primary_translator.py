@@ -1,8 +1,5 @@
 from abc import ABC, abstractmethod
 from typing import Optional
-# ---------------------------
-# Primary Translation Service Classes for use with traditional translate APIs and alike
-# ---------------------------
 
 class PrimaryTranslationService(ABC):
     """

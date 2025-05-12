@@ -1,5 +1,8 @@
-# openai_translator.py
+# openwebui_translator.py
+import logging
 import os
+import sys
+from httpx import HTTPStatusError
 from openai import OpenAI
 from typing import Optional, Any
 from modules.secondary_translators.abstract_secondary_translator import SecondaryTranslationService
@@ -7,11 +10,9 @@ from config import OPENWEBUI_BASE_URL, OPENWEBUI_API_KEY
 
 class OpenWebUITranslationService(SecondaryTranslationService):
     """
-    Translation service that uses OpenAI (GPT).
-    possible models: depends on instance
-    #TODO add more possible models including info about costs
+    Translation service that uses an openwebui-instance.
     """
-    def __init__(self, model_name: str, temperature: float = 1):
+    def __init__(self, model_name: str, temperature: float = 1, logger = None):
         if not OPENWEBUI_BASE_URL:
             raise ValueError("Error: OPENWEBUI_BASE_URL is not set in the environment!")
         if not OPENWEBUI_API_KEY:
@@ -25,7 +26,24 @@ class OpenWebUITranslationService(SecondaryTranslationService):
 
         self.model_name = model_name
         self.temperature = temperature
-        self.service_name = "openai"
+        self.service_name = "openwebui"
+        self.logger: logging.Logger = logger or logging.getLogger(__name__)
+
+    def extract_last_line(self,response_content):
+        """
+        Given any multi-line string `raw`, return the very last non-empty line,
+        stripped of surrounding whitespace and quotes.
+        """
+        # Split into lines
+        lines = response_content.splitlines()
+        # Iterate from the end to find the first non-blank line
+        for line in reversed(lines):
+            # Remove leading/trailing whitespace and any wrapping quotes
+            cleaned = line.strip().strip('"').strip("'")
+            if cleaned:
+                return cleaned
+        # If all lines are blank, return empty string
+        return ""
     
     def translate_with_context(self, prompt: Any) -> Optional[str]:
         #TODO think about which models can be used
@@ -35,39 +53,42 @@ class OpenWebUITranslationService(SecondaryTranslationService):
             input_text = prompt.get("input", "")
         else:
             raise ValueError("Prompt must be a dictionary containing 'instructions' and 'input' keys.")
-    
-        response = self.client.chat.completions.create(
-            model=self.model_name,
-            temperature=self.temperature,
-            messages=[
-                {"role": "system", "content": instructions},
-                {
-                    "role": "user",
-                    "content": input_text,
-                },
-            ],
-        )
+        
+        try:
+            response = self.client.chat.completions.create(
+                model=self.model_name,
+                temperature=self.temperature,
+                messages=[
+                    {"role": "system", "content": instructions},
+                    {
+                        "role": "user",
+                        "content": input_text,
+                    },
+                ],
+            )
 
-        return(response.choices[0].message.content) #TODO think about error handling, what if translation fails or API not reachable etc
-    
+            return(self.extract_last_line(response.choices[0].message.content)) #TODO think about error handling, what if translation fails or API not reachable etc
+        except HTTPStatusError as e:
+            code = e.response.status_code
+            if code == 429:
+                self.logger.critical(
+                    f"{self.service_name} returned Too Many Requests – rate limit reached, exiting."
+                )
+                sys.exit(1)
+            else:
+                self.logger.critical(
+                    f"{self.service_name} returned HTTP {code}: {e.response.text!r}"
+                )
+                # re-raise
+                raise
+        except Exception as e:
+            self.logger.critical(
+                f"{self.service_name} unexpected error\n Exception: {e!r} "
+            )
+
+
+
     # rating a translation is working the same way as translating
     rate_translation = translate_with_context
     
 
-if __name__ == "__main__":
-    models = ["to-be-filled"]
-    for model in models:
-        print(model)
-        try:
-            service = OpenWebUITranslationService(model_name=model)  # Adjust model name if needed
-            # Simulate a prompt dictionary.
-            prompt = {
-                "instructions": (
-                    f"You are friendly"
-                ),
-                "input": f"Say Hello"
-            }
-            translation = service.translate_with_context(prompt)
-            print(translation)
-        except Exception as e:
-            print(f"An error occurred: {e}")
