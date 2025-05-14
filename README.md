@@ -36,10 +36,9 @@ It is possible to try the code out without configuring any api_keys, by using on
 ### Run the demo
 #### Option 1 (run static binary, dependencies included, slower)
 - We created binary files which have python and all dependencies included for quickly running the code as demo.
-- Adding API-Keys is not possible in this approach, but also not needed for the Demo.
 - Only prerequisite: Install `nodejs` on your system (e.g. `sudo apt-get install nodejs` or `brew install node`)
-- Download the binary file matching your CPU architecture: [wokie_64](https://sourceforge.net/projects/wokie/files/wokie_x64/download) or for Apple Silicon Chips [wokie_arm](https://sourceforge.net/projects/wokie/files/wokie_arm/download). The use of WSL on Windows is recommended.
-- Execute `chmomd +x main_<arch>`
+- Download the binary file matching your CPU architecture: [wokie_64](https://sourceforge.net/projects/wokie/files/wokie_x64/download) or for Apple Silicon Chips [wokie_arm](https://sourceforge.net/projects/wokie/files/wokie_arm/download) into this folder. The use of WSL on Windows is recommended.
+- Execute `chmod +x main_<arch>`.
 - Start up takes quite long (up to 1-2 minutes on older systems) because when using a binary, all dependencies will be unpacked first.
 - Run one of these commands (or both if you like):
 - `./main_<arch> --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
