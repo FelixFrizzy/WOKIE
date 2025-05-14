@@ -3,6 +3,7 @@
 # General info
 WOKIE is a free, open-source tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
 
+**Demo**: If you want to quickly try it out, you can jump to the Demo example section and use Option 1 (binary file including all dependencies). 
 
 # Prerequisites
 - Set up translation services that require API_KEYS (see .env.template).
@@ -32,7 +33,18 @@ It is possible to try the code out without configuring any api_keys, by using on
 ### Provided sample files
 - TaDiRAH where the German language was removed: `sample-files/tadirah_de-missing.rdf`
 - DYAS where the English language was removed: `sample-files/dyas_en-missing.rdf`
-### Steps to run demo translation
+### Run the demo
+#### Option 1 (run static binary, dependencies included, slower)
+- We created a binary file which has python and all dependencies included for quickly running the code as demo.
+- Adding API-Keys is not possible in this approach, but also not needed for the Demo.
+- Execute the main_binary file on MacOS, Linux or Windows (using WSL).
+- Start up takes quite long (up to 1-2 minutes on older systems) because when using a binary, all dependencies will be unpacked first.
+- Go to this folder in your terminal
+- `chmomd +x main_binary`
+- Run one of these commands (or both if you like):
+- `./main_binary --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- `./main_binary --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+#### Option 2 (more flexible, requires to install dependencies)
 - Only creating a virtual Python environment and `pip install -r requirements.txt` is needed for the demo.
 - Run one of these commands (or both if you like):
 `python main.py --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
@@ -42,7 +54,7 @@ It is possible to try the code out without configuring any api_keys, by using on
 # Developer Info
 - Enable logging with `python main.py ... --enable-logging`.
 - Run translator services individually for testing: e.g. `python -m modules.primary_translators.modernmt_translator`.
-- Enable Debug mode in .env: Debug=True enables logging and changes the output file name to be more descriptive (and therefore longer), including timestamps. 
+- Enable Debug mode in .env: Debug=True also logs INFO events and changes the output file name to be more descriptive (and therefore longer), including timestamps. 
 
 ## How to use own translation services
 You can implement your own translation services under modules/primary_translators and modules/secondary_translators. See abstract base class for more info.
