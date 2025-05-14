@@ -35,11 +35,10 @@ It is possible to try the code out without configuring any api_keys, by using on
 - DYAS where the English language was removed: `sample-files/dyas_en-missing.rdf`
 ### Run the demo
 #### Option 1 (run static binary, dependencies included, slower)
-- We created a binary file which has python and all dependencies included for quickly running the code as demo.
+- We created binary files which have python and all dependencies included for quickly running the code as demo.
 - Adding API-Keys is not possible in this approach, but also not needed for the Demo.
-- Install `nodejs`.
-- Go to the `bin` folder in your terminal.
-- Search for the binary matching you CPU architecture. `main_arm` for Apple Silicon chips, `main_x64` for all others. The use of WSL on Windows is recommended.
+- Only prerequisite: Install `nodejs` on your system (e.g. `sudo apt-get install nodejs` or `brew install node`)
+- Download the binary file matching your CPU architecture: [wokie_64](https://sourceforge.net/projects/wokie/files/wokie_x64/download) or for Apple Silicon Chips [wokie_arm](https://sourceforge.net/projects/wokie/files/wokie_arm/download). The use of WSL on Windows is recommended.
 - Execute `chmomd +x main_<arch>`
 - Start up takes quite long (up to 1-2 minutes on older systems) because when using a binary, all dependencies will be unpacked first.
 - Run one of these commands (or both if you like):
