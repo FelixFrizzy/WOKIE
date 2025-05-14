@@ -42,7 +42,7 @@ It is possible to try the code out without configuring any api_keys, by using on
 # Developer Info
 - Enable logging with `python main.py ... --enable-logging`.
 - Run translator services individually for testing: e.g. `python -m modules.primary_translators.modernmt_translator`.
-- Enable Debug mode in .env: Debug=True enables logging and changes the output file name to be more descriptive (and therefore longer), including timestamps. 
+- Enable Debug mode in .env: Debug=True also logs INFO events and changes the output file name to be more descriptive (and therefore longer), including timestamps. 
 
 ## How to use own translation services
 You can implement your own translation services under modules/primary_translators and modules/secondary_translators. See abstract base class for more info.
