@@ -37,15 +37,16 @@ It is possible to try the code out without configuring any api_keys, by using on
 #### Option 1 (run static binary, dependencies included, slower)
 - We created a binary file which has python and all dependencies included for quickly running the code as demo.
 - Adding API-Keys is not possible in this approach, but also not needed for the Demo.
-- Execute the main_binary file on MacOS, Linux or Windows (using WSL).
+- Install `nodejs`.
+- Go to the `bin` folder in your terminal.
+- Search for the binary matching you OS, (use WSL on Windows).
+- Execute `chmomd +x main_<yourOS>`
 - Start up takes quite long (up to 1-2 minutes on older systems) because when using a binary, all dependencies will be unpacked first.
-- Go to this folder in your terminal
-- `chmomd +x main_binary`
 - Run one of these commands (or both if you like):
-- `./main_binary --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
-- `./main_binary --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- `./main_<yourOS> --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- `./main_<yourOS> --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
 #### Option 2 (more flexible, requires to install dependencies)
-- Only creating a virtual Python environment and `pip install -r requirements.txt` is needed for the demo.
+- Only installing `nodejs` and `pip install -r requirements.txt` is needed for the demo (using a python virtual environment is recommended).
 - Run one of these commands (or both if you like):
 `python main.py --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
 `python main.py --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
