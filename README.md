@@ -1,7 +1,7 @@
 # WOKIE
 
 # General info
-WOKIE is a free, open-source tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
+WOKIE (**W**ell-translated **O**ptions for **K**nowledge Management in **I**nternational **E**nvironments) is a free, open-source tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
 
 
 # Prerequisites
