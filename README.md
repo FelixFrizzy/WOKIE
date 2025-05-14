@@ -4,6 +4,7 @@
 
 WOKIE (**W**ell-translated **O**ptions for **K**nowledge Management in **I**nternational **E**nvironments) is a free, open-source tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
 
+**Demo**: If you want to quickly try it out, you can jump to the Demo example section and use Option 1 (binary file including all dependencies). 
 
 # Prerequisites
 - In case you want to use any of the non-free services, set up the required API_KEYS (see .env.template).
@@ -34,8 +35,18 @@ It is possible to try the code out without configuring any api_keys, by using on
 ### Provided sample files
 - TaDiRAH where the German language was removed: `sample-files/tadirah_de-missing.rdf`
 - DYAS where the English language was removed: `sample-files/dyas_en-missing.rdf`
-### Steps to run demo translation
-- Only creating a virtual Python environment and `pip install -r requirements.txt` is needed for the demo.
+### Run the demo
+#### Option 1 (run static binary, dependencies included, slower)
+- We created binary files which have python and all dependencies included for quickly running the code as demo.
+- Only prerequisite: Install `nodejs` on your system (e.g. `sudo apt-get install nodejs` or `brew install node`)
+- Download the binary file matching your CPU architecture: [wokie_64](https://sourceforge.net/projects/wokie/files/wokie_x64/download) or for Apple Silicon Chips [wokie_arm](https://sourceforge.net/projects/wokie/files/wokie_arm/download) into this folder. The use of WSL on Windows is recommended.
+- Execute `chmod +x main_<arch>`.
+- Start up takes quite long (up to 1-2 minutes on older systems) because when using a binary, all dependencies will be unpacked first.
+- Run one of these commands (or both if you like):
+- `./main_<arch> --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- `./main_<arch> --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+#### Option 2 (more flexible, requires to install dependencies)
+- Only installing `nodejs` and `pip install -r requirements.txt` is needed for the demo (using a python virtual environment is recommended).
 - Run one of these commands (or both if you like):
 `python main.py --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
 `python main.py --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
