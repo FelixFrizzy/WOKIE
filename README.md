@@ -39,12 +39,12 @@ It is possible to try the code out without configuring any api_keys, by using on
 - Adding API-Keys is not possible in this approach, but also not needed for the Demo.
 - Install `nodejs`.
 - Go to the `bin` folder in your terminal.
-- Search for the binary matching you OS, (use WSL on Windows).
-- Execute `chmomd +x main_<yourOS>`
+- Search for the binary matching you CPU architecture. `main_arm` for Apple Silicon chips, `main_x64` for all others. The use of WSL on Windows is recommended.
+- Execute `chmomd +x main_<arch>`
 - Start up takes quite long (up to 1-2 minutes on older systems) because when using a binary, all dependencies will be unpacked first.
 - Run one of these commands (or both if you like):
-- `./main_<yourOS> --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
-- `./main_<yourOS> --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- `./main_<arch> --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- `./main_<arch> --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
 #### Option 2 (more flexible, requires to install dependencies)
 - Only installing `nodejs` and `pip install -r requirements.txt` is needed for the demo (using a python virtual environment is recommended).
 - Run one of these commands (or both if you like):
