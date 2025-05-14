@@ -5,9 +5,10 @@ WOKIE (**W**ell-translated **O**ptions for **K**nowledge Management in **I**nte
 
 
 # Prerequisites
-- Set up translation services that require API_KEYS (see .env.template).
-- Install Ollama app and run it if you want to use local language models.
-- Install LibreTranslate (pip install libretranslate) and run it with `libretranslate --load-only ar,de,en,es,fr,hu,it,nb,nl,pt,ru,sl` if you want to use argos translate. Add other languages if you need them. **Caution**: this does not work with Python 3.13.x (as of 01.05.2025).
+- In case you want to use any of the non-free services, set up the required API_KEYS (see .env.template).
+- In case you want to use Argos as offline translator, install its local running API with `pip install libretranslate` and run it with `libretranslate --load-only ar,de,en,es,fr,hu,it,nb,nl,pt,ru,sl`. Add other languages if you need them. **Caution**: this does not work with Python 3.13.x (as of 01.05.2025).
+- Install a JavaScript runtime, nodejs is recommended (`sudo apt-get install nodejs` for Debian/Ubuntu or `brew install nodejs`for MacOS)
+
 
 # How to install
 - Tested with Python 3.11.12 on MacOS 15 and on Debian 12.
