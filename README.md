@@ -1,6 +1,7 @@
 # WOKIE
+![tests](https://github.com/FelixFrizzy/WOKIE/actions/workflows/tests.yml/badge.svg)
+[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-# General info
 WOKIE is a free, open-source tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
 
 
@@ -42,7 +43,7 @@ It is possible to try the code out without configuring any api_keys, by using on
 # Developer Info
 - Enable logging with `python main.py ... --enable-logging`.
 - Run translator services individually for testing: e.g. `python -m modules.primary_translators.modernmt_translator`.
-- Enable Debug mode in .env: Debug=True enables logging and changes the output file name to be more descriptive (and therefore longer), including timestamps. 
+- Enable Debug mode in .env: Debug=True also logs INFO events and changes the output file name to be more descriptive (and therefore longer), including timestamps. 
 
 ## How to use own translation services
 You can implement your own translation services under modules/primary_translators and modules/secondary_translators. See abstract base class for more info.
