@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 WOKIE (**W**ell-translated **O**ptions for **K**nowledge Management in **I**nternational **E**nvironments) is a free, open-source tool that automatically translates SKOS thesauri into multiple languages. It combines online translation services with LLMs to pick the best translation for each term. WOKIE runs on any standard PC, making it easy to create FAIR (Findable, Accessible, Interoperable, Reusable) and multilingual vocabularies.
+For an overview of services, see [supported services](supported-services.md). 
 
 **Demo**: If you want to quickly try it out, you can jump to the Demo example section and use Option 1 (binary file including all dependencies). 
 
