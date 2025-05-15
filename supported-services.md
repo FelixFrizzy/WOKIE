@@ -8,26 +8,26 @@ While efforts have been made to ensure accuracy, no responsibility is taken for 
 
 | Name | Free? | Comment |
 | --- | --- | --- |
-| ✅ [Argos](# "translate.argosopentech.com") | yes | Implemeted to be used locally with libretranslate (API of Argos) |
+| ✅ [Argos](https://translate.argosopentech.com/) | yes | Implemeted to be used locally with libretranslate (API of Argos) |
 | ✅ [Google Translate](https://cloud.google.com/translate/docs/reference/rest) | no  | Uses Cloud Translation API |
 | ✅ [Lingvanex](https://lingvanex.com/) | yes |     |
 | ✅ [modernMT](https://www.modernmt.com/) | yes |     |
-| ✅ [Microsoft Translator](https://www.microsoft.com/en-us/translator//) | no  | Quite low request limits |
+| ✅ [Microsoft Translator](https://www.microsoft.com/en-us/translator/) | no  | Quite low request limits |
 | ✅  [PONS](https://de.pons.com/p/ubersetzungsapi) | no  | No latin and serbian in contrast to the [PONS online dictionary](https://de.pons.com/%C3%BCbersetzung) |
 | ✅ [Reverso](# "reverso.com") | yes | Sometimes no API response |
-| ✅ [Yandex translate API](https://yandex.com/) | yes |     |
+| ✅ [Yandex Translate API](https://yandex.com/) | yes |     |
 | ❌ [Alibaba](https://www.alibabacloud.com/en/product/machine-translation?_p_lc=1) |     | Very slow |
 | ❌ apertium |     | Unexpected exception when using the API |
 | ❌ BabelNet |     | Very low request limit |
 | ❌ [Bing](# "bing.com/translator") |     | Very low request limit |
-| ❌ caiyun |     | Very low request per seconds limit |
-| ❌ [cloudtranslation](# "/Applications/Joplin.app/Contents/Resources/app.asar/online.cloudtranslation.com") |     | Very low request per seconds limit |
-| ❌ [Deepl](https://developers.deepl.com/docs) |     | Very low request per seconds limit |
+| ❌ caiyun |     | Very low requests per second |
+| ❌ [cloudtranslation](# "/Applications/Joplin.app/Contents/Resources/app.asar/online.cloudtranslation.com") |     | Very low requests per second |
+| ❌ [Deepl](https://developers.deepl.com/docs) |     | Very low requests per second |
 | ❌ elia |     | Very slow |
-| ❌ hujiang |     | Very low request per seconds limit |
-| ❌ itranslate |     | Very low request per seconds limit |
-| ❌ languageWire |     | Very low request per seconds limit |
-| ❌ [Linguee](https://www.linguee.com/) |     | Very low request per seconds limit |
+| ❌ hujiang |     | Very low requests per second |
+| ❌ itranslate |     | Very low requests per second |
+| ❌ languageWire |     | Very low requests per second |
+| ❌ [Linguee](https://www.linguee.com/) |     | Very low requests per second |
 | ❌ [Mymemory](https://mymemory.translated.net/) |     | Very low request limit |
 | ❌ [OpenNMT](https://opennmt.net/) |     | Only for full texts |
 | ❌ [Papago](https://papago.naver.com/) |     | Very slow, mainly for Korean |
@@ -43,9 +43,9 @@ While efforts have been made to ensure accuracy, no responsibility is taken for 
 
 # LLM models
 
-Costs as they were at 01.05.2025 . While efforts have been made to ensure accuracy, no responsibility is taken for errors or omissions.
+Costs as they were at 01.05.2025. While efforts have been made to ensure accuracy, no responsibility is taken for errors or omissions.
 
-| Model Name | Input Costs (in USD / 1M tokens) | Output costs (in USD / 1M tokens) | Costs for 30.000 Tokens (= small thesaurus) in ¢\* | Comment |
+| Model Name | Input Costs (in USD / 1M tokens) | Output costs (in USD / 1M tokens) | Costs for 30,000 Tokens (= small thesaurus) in ¢\* | Comment |
 | --- | --- | --- | --- | --- |
 | ✅ claude-3-5-haiku | 0.80 | 4   | 2.4 |     |
 | ✅ claude-3-5-sonnet | 3   | 15  | 9   |     |
@@ -70,7 +70,7 @@ Costs as they were at 01.05.2025 . While efforts have been made to ensure accura
 | ✅ ministral-3b-latest | 0.04 | 0.04 | 0.12 |     |
 | ✅ mistral-large-latest | 2   | 6   | 6   |     |
 | ✅ mistral-medium-latest | 0.4 | 2   | 1.2 |     |
-| ✅ mistral-tiny-latest | ?   | ?   |     |     |
+| ✅ mistral-tiny-latest | Unknown   | Unknown   |     |     |
 | ✅ mistral-small-latest | 0.15 | 0.15 | 0.45 |     |
 | ✅ open-mistral-nemo | 0.15 | 0.15 | 0.45 |     |
 | ✅ open-mixtral-8x22b | 2   | 6   | 6   |     |
@@ -82,5 +82,6 @@ Costs as they were at 01.05.2025 . While efforts have been made to ensure accura
 | ❌ open-mistral-7b |     |     |     | Cannot be reliably constrained to adhere to the expected output format, also overly verbose |
 | ❌ open-mixtral-8x7b | 0.7 | 0.7 | 0.21 | Cannot be reliably constrained to adhere to the expected output format, also overly verbose |
 
-- \* The input tokens dominate the costs largely in WOKIE, which is why the total costs for a thesaurus are only calculated with the input costs.
-- \*\* Free to run locally, licensing might apply.
+\* The input tokens dominate the costs largely in WOKIE, which is why the total costs for a thesaurus are only calculated with the input costs.
+
+\*\* Free to run locally, licensing might apply.
