@@ -14,14 +14,14 @@ While efforts have been made to ensure accuracy, no responsibility is taken for 
 | ✅ [modernMT](https://www.modernmt.com/) | yes |     |
 | ✅ [Microsoft Translator](https://www.microsoft.com/en-us/translator/) | no  | Quite low request limits |
 | ✅  [PONS](https://de.pons.com/p/ubersetzungsapi) | no  | No latin and serbian in contrast to the [PONS online dictionary](https://de.pons.com/%C3%BCbersetzung) |
-| ✅ [Reverso](# "reverso.com") | yes | Sometimes no API response |
+| ✅ [Reverso](https://www.reverso.net/) | yes | Sometimes no API response |
 | ✅ [Yandex Translate API](https://yandex.com/) | yes |     |
 | ❌ [Alibaba](https://www.alibabacloud.com/en/product/machine-translation?_p_lc=1) |     | Very slow |
 | ❌ apertium |     | Unexpected exception when using the API |
 | ❌ BabelNet |     | Very low request limit |
-| ❌ [Bing](# "bing.com/translator") |     | Very low request limit |
+| ❌ [Bing](https://www.bing.com/translator) |     | Very low request limit |
 | ❌ caiyun |     | Very low requests per second |
-| ❌ [cloudtranslation](# "/Applications/Joplin.app/Contents/Resources/app.asar/online.cloudtranslation.com") |     | Very low requests per second |
+| ❌ [cloudtranslation](https://online.cloudtranslation.com/) |     | Very low requests per second |
 | ❌ [Deepl](https://developers.deepl.com/docs) |     | Very low requests per second |
 | ❌ elia |     | Very slow |
 | ❌ hujiang |     | Very low requests per second |
@@ -33,8 +33,8 @@ While efforts have been made to ensure accuracy, no responsibility is taken for 
 | ❌ [Papago](https://papago.naver.com/) |     | Very slow, mainly for Korean |
 | ❌ [QcriTranslator](https://mt.qcri.org/api/) |     | Obligatory registration failed |
 | ❌ qqTranSmart |     | Very slow |
-| ❌ [Sogou](# "fanyi.sogou.com/text") |     | Very slow |
-| ❌ [Tencent](# "fanyi.qq.com") |     | Identical to sogou |
+| ❌ [Sogou](https://fanyi.sogou.com/text) |     | Very slow |
+| ❌ [Tencent](https://fanyi.qq.com/) |     | Identical to sogou |
 | ❌ TranslateCom |     | Very low request limit |
 
 &nbsp;
