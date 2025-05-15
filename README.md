@@ -39,15 +39,23 @@ It is possible to try the code out without configuring any api_keys, by using on
 ### Run the demo
 #### Option 1 (run static binary, dependencies included, slower)
 - We created binary files which have python and all dependencies included for quickly running the code as demo.
-- Only prerequisite: Install `nodejs` on your system (e.g. `sudo apt-get install nodejs` or `brew install node`)
-- Download the binary file matching your CPU architecture: [wokie_64](https://sourceforge.net/projects/wokie/files/wokie_x64/download) or for Apple Silicon Chips [wokie_arm](https://sourceforge.net/projects/wokie/files/wokie_arm/download) into this folder. The use of WSL on Windows is recommended.
-- Execute `chmod +x main_<arch>`.
-- Start up takes quite long (up to 1-2 minutes on older systems) because when using a binary, all dependencies will be unpacked first.
-- Run one of these commands (or both if you like):
-- `./main_<arch> --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
-- `./main_<arch> --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- For Linux / Macos / Windows with WSL:
+    - Only prerequisite: Install `nodejs` on your system (e.g. `sudo apt-get install nodejs` or `brew install node`)
+    - Download the binary file matching your OS and CPU architecture: [wokie_64 for Linux or Windows (with WSL)](https://sourceforge.net/projects/wokie/files/wokie_x64/download) or for Apple Silicon Chips [wokie_arm](https://sourceforge.net/projects/wokie/files/wokie_arm/download).
+    - Put the file into this folder.
+    - Execute `chmod +x <wokie>`
+    - Run one of these commands and replace <wokie> with the download file, start up takes a while due to unpacking:
+    - `./wokie_<arch> --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+    - `./wokie_<arch> --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+- For Windows with native Python:
+    - JavaScript runtime (e.g. nodejs) might be necessary.
+    - Download [wokie.exe](https://sourceforge.net/projects/wokie/files/wokie.exe/download).
+    - Put the file into this folder.
+    - Run one of these commands, start up takes a while due to unpacking:
+    - `wokie.exe --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
+    - `wokie.exe --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
 #### Option 2 (more flexible, requires to install dependencies)
-- Only installing `nodejs` and `pip install -r requirements.txt` is needed for the demo (using a python virtual environment is recommended).
+- Only installing `nodejs` and `pip install -r requirements.txt` is needed for the demo (using a Python virtual environment is recommended).
 - Run one of these commands (or both if you like):
 `python main.py --input sample-files/tadirah_de-missing.rdf --language "de" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
 `python main.py --input sample-files/dyas_en-missing.rdf --language "en" --context "Digital Humanities" --threshold 0.0 --primary_translation lingvanex modernmt --secondary_translation "dummy" --min_primary_translations 1`
