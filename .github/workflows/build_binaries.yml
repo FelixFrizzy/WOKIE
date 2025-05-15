@@ -25,7 +25,7 @@ jobs:
        #Build python script into a single execute
       - name: Package Application with PyInstaller
         run: |
-          pyinstaller -F main.py
+          pyinstaller -n wokie -F main.py
       # Uploads artifact
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
