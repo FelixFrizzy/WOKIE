@@ -8,7 +8,7 @@ While efforts have been made to ensure accuracy, no responsibility is taken for 
 
 | Name | Free? | Comment |
 | --- | --- | --- |
-| ✅ [Argos](https://translate.argosopentech.com/) | yes | Implemeted to be used locally with libretranslate (API of Argos) |
+| ✅ [Argos](https://translate.argosopentech.com/) | yes | To be used locally with libretranslate (API of Argos) |
 | ✅ [Google Translate](https://cloud.google.com/translate/docs/reference/rest) | no  | Uses Cloud Translation API |
 | ✅ [Lingvanex](https://lingvanex.com/) | yes |     |
 | ✅ [modernMT](https://www.modernmt.com/) | yes |     |
