@@ -14,8 +14,12 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-
+    runs-on: ${{ matrix.operating-system }}
+    strategy:
+      fail-fast: false #disable to continue all platform runs even if one of the actions fails
+      matrix:
+        operating-system: [ubuntu-latest, windows-latest, macOS-latest]
+        python-version: ["3.11"]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -23,13 +27,13 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.11.12'  
+          python-version: ${{ matrix.python-version }}  
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt  
-
+          
       - name: Run tests
         run: |
           pytest
