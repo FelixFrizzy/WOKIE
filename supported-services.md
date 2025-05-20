@@ -43,7 +43,7 @@ While efforts have been made to ensure accuracy, no responsibility is taken for 
 
 # LLM models
 
-Costs as they were at 01.05.2025. While efforts have been made to ensure accuracy, no responsibility is taken for errors or omissions.
+Costs as they were at 01.05.2025 using the API provided by the manufacturer. While efforts have been made to ensure accuracy, no responsibility is taken for errors or omissions.
 
 | Model Name | Input Costs (in USD / 1M tokens) | Output costs (in USD / 1M tokens) | Costs for 30,000 Tokens (= small thesaurus) in ¢\* | Comment |
 | --- | --- | --- | --- | --- |
