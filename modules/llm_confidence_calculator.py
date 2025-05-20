@@ -109,8 +109,8 @@ class LLMConfidenceCalculator():
         instruction_prompt = """
         You are a professional translation review system that assesses the quality of translations of a single term given in different source languages. The translations are already given by a translation system. Give me the best fitting translation out of the given list and a confidence how sure you are that the translation is accurate on a scale from 0 to 1. If no possible translation seems to be fitting, return None as best fitting translation and a confidence of 0.
         Criteria for high accuracy are:
-        - The best fitting translation is already found in the already given possible translations
-        - In the currenct context, there is no possible translation that has a different meaning
+        - The best fitting translation is already found in the already given possible translations.
+        - In the current context, there is no possible translation that has a different meaning.
 
         Only give me the best fitting translation and the confidence in this format:
         best fitting translation; confidence
