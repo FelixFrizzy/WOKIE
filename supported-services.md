@@ -17,25 +17,25 @@ While efforts have been made to ensure accuracy, no responsibility is taken for 
 | ✅ [Reverso](https://www.reverso.net/) | ✅   | Sometimes no API response |
 | ✅ [Yandex Translate API](https://yandex.com/) | ✅   |     |
 | ❌ [Alibaba](https://www.alibabacloud.com/en/product/machine-translation?_p_lc=1) |     | Very slow |
-| ❌ apertium |     | Unexpected exception when using the API |
-| ❌ BabelNet |     | Very low request limit |
+| ❌ [Apertium](https://www.apertium.org) |     | Unexpected exception when using the API |
+| ❌ [BabelNet](https://babelnet.org/) |     | Very low request limit |
 | ❌ [Bing](https://www.bing.com/translator) |     | Very low request limit |
-| ❌ caiyun |     | Very low requests per second |
-| ❌ [cloudtranslation](https://online.cloudtranslation.com/) |     | Very low requests per second |
-| ❌ [Deepl](https://developers.deepl.com/docs) |     | Very low requests per second |
-| ❌ elia |     | Very slow |
-| ❌ hujiang |     | Very low requests per second |
-| ❌ itranslate |     | Very low requests per second |
-| ❌ languageWire |     | Very low requests per second |
+| ❌ [Caiyun](https://fanyi.caiyunapp.com/) |     | Very low requests per second |
+| ❌ [CloudTranslation](https://online.cloudtranslation.com/) |     | Very low requests per second |
+| ❌ [DeepL](https://developers.deepl.com/docs) |     | Very low requests per second |
+| ❌ [elia](https://elia.eus/start) |     | Very slow |
+| ❌ [hujiang](https://dict.hjenglish.com/app/trans) |     | Very low requests per second |
+| ❌ [iTranslate](https://itranslate.com/webapp) |     | Very low requests per second |
+| ❌ [languageWire](https://www.languagewire.com/en/technology/languagewire-translate) |     | Very low requests per second |
 | ❌ [Linguee](https://www.linguee.com/) |     | Very low requests per second |
 | ❌ [Mymemory](https://mymemory.translated.net/) |     | Very low request limit |
 | ❌ [OpenNMT](https://opennmt.net/) |     | Only for full texts |
 | ❌ [Papago](https://papago.naver.com/) |     | Very slow, mainly for Korean |
 | ❌ [QcriTranslator](https://mt.qcri.org/api/) |     | Obligatory registration failed |
-| ❌ qqTranSmart |     | Very slow |
+| ❌ [qqTranSmart](https://transmart.qq.com/) |     | Very slow |
 | ❌ [Sogou](https://fanyi.sogou.com/text) |     | Very slow |
 | ❌ [Tencent](https://fanyi.qq.com/) |     | Identical to sogou |
-| ❌ TranslateCom |     | Very low request limit |
+| ❌ [TranslateCom](https://www.translate.com/machine-translation) |     | Very low request limit |
 
 &nbsp;
 
