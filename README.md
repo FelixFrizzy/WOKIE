@@ -7,6 +7,8 @@ For an overview of services, see [supported services](supported-services.md).
 
 **Demo**: If you want to quickly try it out, you can jump to the Demo example section and use Option 1 (binary file including all dependencies). 
 
+**Publication**: For more details, see the corresponding publication: [Mind the Language Gap in Digital Humanities: LLM-Aided Translation of SKOS Thesauri (Kraus et al.)](https://doi.org/10.63744/a98mEv2X4ugw)
+
 # Prerequisites
 - In case you want to use any of the non-free services, set up the required API_KEYS (see .env.template).
 - In case you want to use Argos as offline translator, install its local running API with `pip install libretranslate` and run it with `libretranslate --load-only ar,de,en,es,fr,hu,it,nb,nl,pt,ru,sl`. Add other languages if you need them. **Caution**: this does not work with Python 3.13.x (as of 01.05.2025).
