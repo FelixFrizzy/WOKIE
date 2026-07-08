@@ -81,7 +81,7 @@ You can implement your own translation services under modules/primary_translator
 - [DYAS](https://isl.ics.forth.gr/bbt-federated-thesaurus/HUMANITIES-THESAURUS/en/) (adapted) [[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.en); Creators: Chatzi Maria (ASFA); Chatzimichail Christos (AA); Chrysovitsanos Gerasimos (AA); Daskalothanasis Nikos (ASFA); Dimakopoulou Christina (ASFA); Drapelova Pavla (UOA); Falierou Anastasia (AA); Gardika Katerina (UOA); Georgopoulos Theodoros (UOA); Goulis Helen (AA); Iakovidou Athena (AA); Kalafata Patritsia (AA); Karasimos Athanasios (AA); Katakis Stelios (UOA); Katsiadakis Helen (AA); Konstantellou Dora (UOA); Mergoupi-Savaidou Eirini (AA); Papadopoulou Georgia (UOA); Sichani Anna-Maria (AA); Sinou Christina (AA); Souyioultzoglou Iraklitos (AA); Terzis Christos (AA); Theodoridou Dimitra (UOA); Tzedopoulos Giorgos (AA); Xiropaidis Georgios (ASFA); ]  
 
 ## WOKIE
-WOKIE is licensed under the Apache License, Version 2.0. 
+WOKIE is licensed under the MIT license. 
 License owner: Karlsruhe Institute of Technology (KIT)
 
 # Contact information
